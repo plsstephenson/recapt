@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title></title>
+    </head>
+    <body>
+        <div>
+            <MadCap:bodyProxy />
+            <div class="footer center">
+                <div class="home-footer">
+                    <div>
+                        <p class="footer-logo">&#160;</p>
+                    </div>
+                    <div class="footer-icons"><span style="font-family: 'Segoe UI Semibold'; color: #ffffff;">Need help getting your project configured? Contact </span><a href="mailto:support.ptc@upu.int"><span style="font-family: 'Segoe UI Semibold';"><span style="color: #ffffff;">PTC Support</span></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

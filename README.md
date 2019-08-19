@@ -10,9 +10,15 @@ Recapt provides:
 - Software localization support
 
 ## Customers
+
 - Universal Postal Union
 - Rubric
 - Hydrogen Consulting
+
+## Porfolio
+
+- [ID platform API](../IDPlatform/index.html)
+- [UPU API documentation](../UPU/Default.htm)
 
 ### Support or Contact
 
