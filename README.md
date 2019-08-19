@@ -17,7 +17,7 @@ Recapt provides:
 
 ## Porfolio
 
-Click [here](../portfolio.md) to see my portfolio.
+Click [here](../portfolio.html) to see my portfolio.
 
 ### Support or Contact
 
