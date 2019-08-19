@@ -31,8 +31,6 @@ Recapt provides:
 
 [IPS Installation Guide](../PDFs/IPS Installation Guide.pdf)  
 
-[IPS POST &amp; IPS Cloud Installation and Configuration Guide](IPS.POST IPS Cloud Installation and Configuration Guide.pdf)  
-
 [UPU Workspace User Guide](../PDFs/UPU Workspace User Guide.pdf)  
 
 ### Online Help
