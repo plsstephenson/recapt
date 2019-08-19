@@ -1,6 +1,6 @@
 # Welcome to Recapt
 
-Quality supplier of technical documentation and localization project management services.  
+Quality supplier of technical documentation and localization services.  
 
 ## Services
 
@@ -17,7 +17,7 @@ Recapt provides:
 
 ## Porfolio
 
-Click [here](../portfolio.md) to see my portfolio
+Click [here](../portfolio.md) to see my portfolio.
 
 ### Support or Contact
 
