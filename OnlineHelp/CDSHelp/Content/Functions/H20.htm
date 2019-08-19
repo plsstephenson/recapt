@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Manage rules for customs responses</title>
+        <link href="../Resources/Stylesheets/GlobalStylesheet.css" rel="stylesheet" type="text/css" />
+        <link href="" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../index.htm#Functions/H20.htm">Open topic with navigation</a>
+        </p>
+        <h1>Manage rules for customs responses</h1>
+        <p>You use the <b>Manage rules for customs responses</b> function to configure:</p>
+        <ul class="Bluebullets">
+            <li value="1">automated response rules for outbound and inbound declarations sent to Customs by their local Post</li>
+            <li value="2">the transfer of these responses to the sending Post, in the case of inbound declarations</li>
+        </ul>
+        <h2><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="configure"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />To configure rules for automated responses to a local Post</a>
+        </h2>
+        <div style="display: none;" data-mc-target-name="configure">
+            <ol>
+                <li value="1">Click the <b>Auto response rules</b> tab. You can create one or more auto response rules for each type of Customs decision. <span class="CDSAppNameShort">CDS</span> checks every declaration against your configuration and, when a rule matches, provides one of the following automatic responses:
+      
+        <ul class="Bluebullets"><li value="1">Item must be presented</li><li value="2">Item is cleared</li><li value="3">Item is cleared after being checked</li><li value="4">Charge raised, but Customs do not need to see it</li><li value="5">Refer to other government department</li><li value="6">Enforcement</li><li value="7">Detention</li><li value="8">Item is not allowed in the country</li><li value="9">Other</li><li value="10">Any other decision you may have defined with the <b>Manage customs decisions</b> function</li></ul><p class="Note"><img src="../Resources/Images/Notes-green.png" title="note" />In a local <span class="CDSAppNameShort">CDS</span> installation, it is possible to expand the list to include any other responses required in the country implementing the system. These additional decisions can also be automated following the same logic described in these sections.</p></li>
+            </ol>
+            <ol start="4" data-mc-continue="true">
+                <li value="2">To create one or more auto response rules, click <b>Edit</b> next to the Customs decision.</li>
+                <li value="3">Enter the priority of the auto response rule. When it comes to applying the rules, rules with greater priority (a higher number) will be applied first.</li>
+                <li value="4">For each auto response rule you want to add for this type of Customs decision, click <b>Add auto response rules</b>. The rules are listed as rows in the table. For each rule, click <b>Edit</b> next to it, then complete the following steps in the inbound or outbound mail section.  </li>
+                <li value="5">Check the required rules from A to R and specify any corresponding values.</li>
+                <li value="6">Enter your combination of criteria in the <b>Logical expression</b> field and use the logical operators AND and OR in combination with brackets (if necessary).</li>
+                <li value="7">Finally, you can randomize responses by setting a value between 0 and 100 in the <b>Applies to a percentage of items of</b> textbox.</li>
+            </ol>
+        </div>
+        <h3>Examples of automated response rules to a local Post</h3>
+        <p>In the example below, the rules for an automatic response have been configured. The rules state that outbound mail items must be automatically presented (code 1) if:</p>
+        <ul class="Bluebullets">
+            <li value="1">the address (including sender name) contains <b>INDIANA</b> or <b>JONES</b> (not case sensitive), or</li>
+            <li value="2">the HS code of one of the content pieces is <b>970300</b> (original sculptures and statuary) in any material</li>
+            <li value="3">this rule applies to all inbound items (100%)</li>
+        </ul>
+        <p>
+            <img src="../Resources/Images/Customs_AutoResponseExamples_727x624.png" style="width: 727;height: 624;" />
+        </p>
+        <p>In the example below, the rules for another automatic response have been configured.</p>
+        <p>The rules state that inbound mail items must be automatically presented (code 1) if:</p>
+        <ul class="Bluebullets">
+            <li value="1">the address (including sender name) contains <b>MARLEY</b>, or</li>
+            <li value="2">the mail item’s class is parcel or EMS, and the weight is greater than 453 grams</li>
+        </ul>
+        <p>This rule applies to 60% of inbound items. Sampling is performed randomly.</p>
+        <p>
+            <img src="../Resources/Images/Customs_AutoResponseExamples2_723x623.png" style="width: 723;height: 623;" />
+        </p>
+        <h2><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="configure2"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />To configure rules for automatically transferring responses to the origin Post for inbound mail:</a>
+        </h2>
+        <div style="display: none;" data-mc-target-name="configure2">
+            <ol>
+                <li value="1">Select the <b>Origin post transfer rules</b> tab. The response decision code depends on the rule defined for automatic responses to the local Post.</li>
+                <li value="2">Configure the rules for additionally creating a response to the sending Post if certain criteria are met.</li>
+                <li value="3">Enter your combination of criteria in the <b>Logical expression</b> field and use the logical operators AND and OR in combination with brackets (if necessary).</li>
+            </ol>
+            <p>In the following example, the Customs response will be forwarded to the sending Post if the sending Post is AUA or RAS.</p>
+            <p>
+                <img src="../Resources/Images/Customs_AutoResponseExamples3.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #a9a9a9;border-right-style: solid;border-right-width: 1px;border-right-color: #a9a9a9;border-top-style: solid;border-top-width: 1px;border-top-color: #a9a9a9;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #a9a9a9;" />
+            </p>
+        </div>
+        <h2><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="view"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />To view auto response rules:</a>
+        </h2>
+        <div style="display: none;" data-mc-target-name="view">
+            <p>Use the <b>Inbound Selectivity Rules Dashboard</b> function to view all automated response rules defined in the system. You can choose to view all rules associated with a decision name or all rules for all decisions and then export the report.</p>
+            <ol>
+                <li value="1">Click the <b>Inbound Selectivity Rules Dashboard</b> button from your Home page. By default, the system displays your user ID in the <b>CurrentUser</b> field.</li>
+            </ol>
+            <ol start="2">
+                <li value="2">In the <b>DecisionName</b> field, enter a specific decision name or leave it blank to view all rules for all decisions.</li>
+                <li value="3">Click <b>Execute</b>. <span class="CDSAppNameShort">CDS</span> displays the results. Details of the rule associated with the decision are displayed.</li>
+                <li value="4">Click <b>Export</b> to export the report to a comma separated file.</li>
+            </ol>
+        </div>
+    </body>
+</html>

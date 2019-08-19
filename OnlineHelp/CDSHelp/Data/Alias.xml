@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultAliasFile>
+    <Map Name="HOME" Link="Home.htm" ResolvedId="1" />
+    <Map Name="CUSTOMS_ADMINISTRATOR_FUNCTIONS" Link="Customs administrator functions.htm" ResolvedId="7" />
+    <Map Name="POSTAL_USER_FUNCTIONS" Link="Postal user functions.htm" ResolvedId="3" />
+    <Map Name="OVERVIEW" Link="Overview.htm" ResolvedId="4" />
+    <Map Name="POSTAL_ADMINISTRATOR_FUNCTIONS" Link="Postal administrator functions.htm" ResolvedId="5" />
+    <Map Name="CUSTOMS_USER_FUNCTIONS" Link="Customs user functions.htm" ResolvedId="6" />
+    <Map Name="GETTING_STARTED" Link="Getting Started.htm" ResolvedId="2" />
+    <Map Name="H30" Link="Functions/H30.htm" ResolvedId="8" />
+    <Map Name="H50" Link="Functions/H50.htm" ResolvedId="9" />
+    <Map Name="H2" Link="Functions/H2.htm" ResolvedId="10" />
+    <Map Name="H9" Link="Functions/H9.htm" ResolvedId="11" />
+    <Map Name="H4" Link="Functions/H4.htm" ResolvedId="12" />
+    <Map Name="H61" Link="Functions/H61.htm" ResolvedId="13" />
+    <Map Name="H10" Link="Functions/H10.htm" ResolvedId="14" />
+    <Map Name="H90" Link="Functions/H90.htm" ResolvedId="15" />
+    <Map Name="H65" Link="Functions/H65.htm" ResolvedId="16" />
+    <Map Name="H100" Link="Functions/H100.htm" ResolvedId="17" />
+    <Map Name="H120" Link="Functions/H120.htm" ResolvedId="18" />
+    <Map Name="H20" Link="Functions/H20.htm" ResolvedId="19" />
+    <Map Name="H122" Link="Functions/H122.htm" ResolvedId="20" />
+    <Map Name="H67" Link="Functions/H67.htm" ResolvedId="21" />
+    <Map Name="H11" Link="Functions/H11.htm" ResolvedId="22" />
+    <Map Name="H55" Link="Functions/H55.htm" ResolvedId="23" />
+    <Map Name="H31" Link="Functions/H31.htm" ResolvedId="24" />
+    <Map Name="H176" Link="Functions/H176.htm" ResolvedId="25" />
+    <Map Name="H175" Link="Functions/H175.htm" ResolvedId="26" />
+    <Map Name="H40" Link="Functions/H40.htm" ResolvedId="27" />
+    <Map Name="H41" Link="Functions/H41.htm" ResolvedId="28" />
+</CatapultAliasFile>

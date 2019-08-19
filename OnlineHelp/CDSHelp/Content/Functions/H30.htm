@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Create declaration for outbound item at post</title>
+        <link href="../Resources/Stylesheets/GlobalStylesheet.css" rel="stylesheet" type="text/css" />
+        <link href="../Resources/TableStyles/TableStyle.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="" rel="stylesheet" type="text/css" />
+        <link href="../Resources/TableStyles/TableStyle.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../index.htm#Functions/H30.htm">Open topic with navigation</a>
+        </p>
+        <h1>Create declaration for outbound item at post</h1>
+        <p>You use the <b>Create declaration for outbound item at post</b> function to reconcile an item's S10 identifier with the declaration data available in the Kiosk using   <b>Fill from anonymous declaration</b>. You can then review the data, print the CN23 form with an S10 barcode, and save the item to trigger the generation of an ITMATT&#160;message.</p>
+        <h2><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="create"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />To create or edit an outbound mail item declaration</a>
+        </h2>
+        <div style="display: none;" data-mc-target-name="create">
+            <ol>
+                <li value="1">Enter the <b>Item id</b>. If you have a barcode scanner connected to your workstation, you can scan the S10 label (i.e. international mail identifier barcode)  attached to the mail item.
+			</li>
+                <li value="2">
+                    <p>If the same mail ID already exists in <span class="CDSAppNameShort">CDS</span>, you can update it, or create a new entry with the same international mail ID.</p>
+                    <p>To update an item, click <b>Select</b> next to the item you wish to edit, or <b>New</b> to create a new entry in the <span class="CDSAppNameShort">CDS</span> database.</p>
+                    <p>If data is available from the Kiosk, click <b>Fill from anonymous declaration</b>, then enter the anonymous declaration ID when prompted. The system populates the fields with information. Otherwise, if data is not available, proceed to fill in the fields.</p>
+                </li>
+                <li value="3">
+                    <p>Complete or review the general information:</p>
+                    <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../Resources/TableStyles/TableStyle.css');" class="TableStyle-TableStyle" cellspacing="0">
+                        <col class="TableStyle-TableStyle-Column-Column1" />
+                        <col class="TableStyle-TableStyle-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-TableStyle-Head-Header1">
+                                <th class="TableStyle-TableStyle-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-TableStyle-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-TableStyle-Body-Body1">
+                                <td class="TableStyle-TableStyle-BodyE-Column1-Body1">Destination post</td>
+                                <td class="TableStyle-TableStyle-BodyD-Column2-Body1"> The postal operator as listed in the CDS reference dataset (e.g. CHA stands for Swiss Post).</td>
+                            </tr>
+                            <tr class="TableStyle-TableStyle-Body-Body1">
+                                <td class="TableStyle-TableStyle-BodyE-Column1-Body1">Mail class</td>
+                                <td class="TableStyle-TableStyle-BodyD-Column2-Body1">The type of mail: EMS, Letter or Parcel.</td>
+                            </tr>
+                            <tr class="TableStyle-TableStyle-Body-Body1">
+                                <td class="TableStyle-TableStyle-BodyE-Column1-Body1">Posting date</td>
+                                <td class="TableStyle-TableStyle-BodyD-Column2-Body1">The date and time the mail item was posted.</td>
+                            </tr>
+                            <tr class="TableStyle-TableStyle-Body-Body1">
+                                <td class="TableStyle-TableStyle-BodyE-Column1-Body1">Local ID</td>
+                                <td class="TableStyle-TableStyle-BodyD-Column2-Body1">(optional)&#160;A local identifier associated with the mail item used by some postal operators for domestic distribution. This is particularly useful in differentiating between duplicate mail items.</td>
+                            </tr>
+                            <tr class="TableStyle-TableStyle-Body-Body1">
+                                <td class="TableStyle-TableStyle-BodyB-Column1-Body1">Mail state</td>
+                                <td class="TableStyle-TableStyle-BodyA-Column2-Body1">
+                                    <p>(optional) Identifies the state of the mail item according to its EMSEVT tracking state.</p>
+                                    <p>The following outbound states are allowed:</p>
+                                    <ul>
+                                        <li value="1">A - received from customer (equivalent to EMSEVTv1 <b>EMA</b>)</li>
+                                        <li value="2">B - arrived in outbound OOE (EMSEVTv1 <b>EMB</b>)</li>
+                                        <li value="3">B1 - arrived in outbound customs (EMSEVTv3 <b>EXA</b>)</li>
+                                        <li value="4">B2 - marked as blocked in OOE (state provided to reflect watchdog functionality)</li>
+                                        <li value="5">B3 - marked with warning in OOE (state provided to reflect watchdog functionality)</li>
+                                        <li value="6">C - departed OOE (equivalent to EMSEVTv1 <b>EMC</b>)</li>
+                                    </ul>
+                                    <p>and the following inbound states are allowed:</p>
+                                    <ul>
+                                        <li value="1">D - arrived at IOE</li>
+                                        <li value="2">E - arrived at customs</li>
+                                        <li value="3">F - departed IOE</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li value="4">Complete the postal declaration details:
+
+                <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../Resources/TableStyles/TableStyle.css');" class="TableStyle-TableStyle" cellspacing="0"><col class="TableStyle-TableStyle-Column-Column1" /><col class="TableStyle-TableStyle-Column-Column2" style="width: 307px;" /><thead><tr class="TableStyle-TableStyle-Head-Header1"><th class="TableStyle-TableStyle-HeadE-Column1-Header1">Field</th><th class="TableStyle-TableStyle-HeadD-Column2-Header1">Description</th></tr></thead><tbody><tr class="TableStyle-TableStyle-Body-Body1"><td class="TableStyle-TableStyle-BodyE-Column1-Body1">Sender</td><td class="TableStyle-TableStyle-BodyD-Column2-Body1"> The sender’s name and address details.</td></tr><tr class="TableStyle-TableStyle-Body-Body1"><td class="TableStyle-TableStyle-BodyE-Column1-Body1">Recipient</td><td class="TableStyle-TableStyle-BodyD-Column2-Body1">The recipient’s name and address details.</td></tr><tr class="TableStyle-TableStyle-Body-Body1"><td class="TableStyle-TableStyle-BodyE-Column1-Body1">Content pieces</td><td class="TableStyle-TableStyle-BodyD-Column2-Body1">Click <b>Edit</b> to add a new content piece to the list or edit an existing one; you can provide the following attributes for up to 99 content pieces within the same Customs declaration:
+						<ul><li value="1"><b>Number</b> of goods within a content piece</li><li value="2"><b>Description</b> of the content piece (e.g. t-shirt, shoes, sweets); according to the UPU’s letter post manual, this description can be provided in English, French the official language of the country of destination</li><li value="3"><span class="bold" style="font-weight: bold;">Revised HS</span>, the Customs identification number as determined from the content piece description by the HS Lookup functionality (for example 640219 for Golf shoes)</li><li value="4"><b>Orig country</b> of the content piece; use the 2-character ISO code to indicate the origin country of the goods (which may differ from the origin country of the mail item)</li><li value="5"><b>HS</b>, the HS code originally entered for the item; this helps Customs greatly in their assessment of items, so be sure to add it if available</li><li value="6"><b>Net weight (kg)</b> of the content piece</li><li value="7"><b>Amount </b>(value) of the content piece</li><li value="8"><b>Currency</b> of the value of the content piece; this field is populated by default if your Postal Administrator has defined a default value for it in <b>Manage organization preferences</b> (see <a href="H9.htm">Manage organization preferences</a>)</li></ul><p>You can also delete all content pieces by clicking <b>Delete all CP</b>.</p></td></tr><tr class="TableStyle-TableStyle-Body-Body1"><td class="TableStyle-TableStyle-BodyE-Column1-Body1">Accompanying documents</td><td class="TableStyle-TableStyle-BodyD-Column2-Body1">Click <b>Edit</b> to add details of a document accompanying the mail item or edit an existing one; you can provide the following attributes for up to nine documents, which are then transmitted in the outbound ITMATT message; for each document you need to provide the <b>Document type</b> (up to three characters long, it must match UPU code list 184), <b>Document ID</b> and <b>Document name</b>.<p><img src="../Resources/Images/Notes-green.png" title="note" /><span class="CDSAppNameShort">CDS</span> shows three documents at a time by default. After you provide details for the first three documents, a fourth empty row is displayed. A subsequent row is then displayed each time the previous one is populated.</p></td></tr><tr class="TableStyle-TableStyle-Body-Body1"><td class="TableStyle-TableStyle-BodyB-Column1-Body1">Other</td><td class="TableStyle-TableStyle-BodyA-Column2-Body1">Specify the following attributes, that are part of the CN23 declaration data set:
+						<ul><li value="1"><b>Handling class</b> (top right of screen); this applies mainly to letter mail items, allowing you to specify whether they are ordinary, insured or registered</li><li value="2"><b>Insured value</b> and currency of the mail item; the currency code is pre-populated according to your organization’s default currency</li><li value="3"><b>Nature</b> of the transaction associated with the mail item; you can choose from a value contained in UPU code list 136 (e.g. gift, commercial sample, etc.)</li><li value="4"><b>Gross weight (kg)</b> of the mail item</li><li value="5"><b>Postage</b> amount and currency; the currency code is pre-populated according to your organization’s default currency</li><li value="6"><b>Transport mode</b> of the mail item</li><li value="7"><b>Transport date</b>; click <b>Now</b> to get today’s date and time</li><li value="8">Any fields that your administrator defined in <b>Extra fields for declarations</b> (see <a href="H9.htm">Manage organization preferences</a>);&#160;examples of extra fields are <b>Customer Number</b>, <b>Passport Number</b> and <b>Code</b></li></ul></td></tr></tbody></table></li>
+                <li value="5">Complete the declaration by selecting one of the following actions from <b>New action</b> and clicking <b>Store</b> (note that only the options relating to the current configuration are available):
+							<ul><li value="1"><b>1 (Create/update draft)</b> saves a draft declaration for later editing without sharing it with another organization</li><li value="2"><b>2 (Store final (automatic transfer))</b> stores the declaration; it will be automatically transferred to local Customs or to the destination post if the administrator user of the export post configured rules for this automatic forwarding</li><li value="3"><b>6 (Send to customs)</b> sends the declaration to local Customs for export analysis; local Customs can then cancel the export or clear its way, or provide any other response that may make sense within the local context</li><li value="4"><b>7 (Send to dest post)</b> sends the declaration to the destination post</li><li value="5"><b>8 (Delete)</b> deletes a previously created declaration; this function is typically used to delete a previously stored draft declaration that is no longer relevant</li></ul></li>
+                <li value="6">
+				Click <b>Store</b>
+or <b>Store &amp; print CN23</b>.	If you choose to print the CN23, see the following sections for more details of available formats.	</li>
+            </ol>
+            <h3>Printing a Declaration Form</h3>
+            <p>By default, <span class="CDSAppNameShort">CDS</span> produces an A4 CN23 paper print-out of the details entered into the electronic form. </p>
+            <p>
+                <img src="../Resources/Images/User_CreateOutboundDeclaration.PNG" />
+            </p>
+            <h3>Printing a Declaration Form on A5 paper and reducing the size further</h3>
+            <p>
+                <img src="../Resources/Images/Notes-green.png" title="note" />Before printing, check that your printer is properly configured for your desired page orientation: portrait or landscape. </p>
+            <p>You can print the CN23 form on A5 (148 x 210mm) paper. This is the smallest print-out format possible for the CN23 form without sacrificing readability. If your printer, however, has only A4-sized paper loaded and you selected to print the CN23 form on A5, the form will be printed on the center of the page.</p>
+            <p>Should you wish to scale down the form size further for packaging purposes, you can print it on A6 paper. Select your print page setup to A6 (105 x 148mm) format  then set the size option to <b>Shrink oversized pages</b>. Alternatively, you can fold the A5 CN23 form to fit on a small package. </p>
+        </div>
+    </body>
+</html>

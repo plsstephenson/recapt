@@ -17,10 +17,7 @@ Recapt provides:
 
 ## Porfolio
 
-[Click here to see my portfolio.](../portfolio.html)
-
-- [ID platform API](../IDPlatform/index.html)
-- [UPU API documentation](../UPU/Default.htm)
+Click [here](../portfolio.md) to see my portfolio
 
 ### Support or Contact
 

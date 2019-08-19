@@ -1,0 +1,1 @@
+define({r:0.5,st:'Stem',n:1,t:[0],u:['../Content/Customs administrator functions.htm'],s:['+'],p:[['+',8],['declaration',17],['log',0],['sequence',6]]});
