@@ -262,8 +262,9 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to IDPlatform API! This is real API documentation with the product name changed for anonymity.
-  You can use our API to manage access tokens for user authentication, including functions such as:</p>
+<p>Welcome to IDPlatform API! You can use our API to manage access tokens for user authentication, including functions such as:</p>
+
+<p>Note! This is real API documentation with the details changed for anonymity. None of the links will work</p>
 
 <ul>
 <li>creating new access tokens</li>
@@ -277,24 +278,24 @@
 
 <!-- <aside class="notice"></aside> -->
 <h1 id='howto'>HowTo</h1>
-<p>For more information on how to accomplish different access token tasks with IDPlatform, watch this <a href="https://drive.google.com/file/d/13-sY_eqccf4dqcbbsi_GQRn8uAsbfICN/view">video</a>.</p>
+<p>For more information on how to accomplish different access token tasks with IDPlatform, watch this <a href="https://drive.google.com">video</a>.</p>
 <h1 id='reference'>Reference</h1><h2 id='get-openid-connect-config'>GET OpenID Connect Config</h2>
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"https://sso.empoweriam.com/oauth/.well-known/openid-configuration"</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"https://sso.idplatform.com/oauth/.well-known/openid-configuration"</span>
 </code></pre>
 <blockquote>
 <p>Example response</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.empoweriam.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"jwks_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.empoweriam.com/oauth/.well-known/jwks"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"authorization_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.empoweriam.com/oauth/v2/ui/authorize"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"token_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.empoweriam.com/oauth/v2/token"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"userinfo_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.empoweriam.com/oauth/v2/userinfo"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"tokeninfo_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.empoweriam.com/oauth/v2/tokeninfo"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"tokenrevoke_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.empoweriam.com/oauth/v2/tokenrevoke"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.idplatform.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jwks_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.idplatform.com/oauth/.well-known/jwks"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"authorization_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.idplatform.com/oauth/v2/ui/authorize"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.idplatform.com/oauth/v2/token"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"userinfo_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.idplatform.com/oauth/v2/userinfo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tokeninfo_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.idplatform.com/oauth/v2/tokeninfo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tokenrevoke_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.idplatform.com/oauth/v2/tokenrevoke"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"scopes_supported"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="s2">"openid"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"profile"</span><span class="p">,</span><span class="w">
@@ -342,7 +343,7 @@
 </span></code></pre>
 <p>This endpoint retrieves configuration data for an IDPlatform platform tenant.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://sso.empoweriam.com/oauth/.well-known/openid-configuration</code></p>
+<p><code>GET https://sso.idplatform.com/oauth/.well-known/openid-configuration</code></p>
 
 <!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
@@ -356,7 +357,7 @@ ID | The ID of the kitten to retrieve
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"https://sso.empoweriam.com/oauth/.well-known/jwks"</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"https://sso.idplatform.com/oauth/.well-known/jwks"</span>
 </code></pre>
 <blockquote>
 <p>Example response</p>
@@ -445,12 +446,12 @@ ID | The ID of the kitten to retrieve
 </span></code></pre>
 <p>This endpoint retrieves public keys.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://sso.empoweriam.com/oauth/.well-known/jwks</code></p>
+<p><code>GET https://sso.idplatform.com/oauth/.well-known/jwks</code></p>
 <h2 id='post-access-token-password'>POST Access Token (Password)</h2>
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.empoweriam.com/oauth/v2/token"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.idplatform.com/oauth/v2/token"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Basic cGF0cmljazpwQCQkdzByZA=="</span> <span class="se">\</span>
   --data <span class="s2">"client_id=3542a382-60ef-4a49-85c4-30831fa1a474&amp;client_secret=4d045e04-7f76-4fea-8041-4430e53a440c&amp;grant_type=password&amp;scope=openid"</span>
@@ -469,7 +470,7 @@ ID | The ID of the kitten to retrieve
 </span></code></pre>
 <p>This endpoint retrieves the access token, ID token and refresh token for the password, which can be used in the POST Refresh Token, POST User Info and POST Token Info endpoints listed below.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST https://sso.empoweriam.com/oauth/v2/token</code></p>
+<p><code>POST https://sso.idplatform.com/oauth/v2/token</code></p>
 
 <!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 -->
@@ -517,13 +518,13 @@ ID | The ID of the kitten to retrieve
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.empoweriam.com/oauth/v2/token"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.idplatform.com/oauth/v2/token"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --data <span class="s2">"client_id=3542a382-60ef-4a49-85c4-30831fa1a474&amp;client_secret=4d045e04-7f76-4fea-8041-4430e53a440c&amp;grant_type=authorization_code&amp;code=bW5lWmNYT0VxMnAxRFQwUFIwNy84czBpUkdDTTY2RitjRkFhd0JXUXVOM3MzUXZ4TlptYTgrdUw2akdVMDRSdGc2V1h6WjdOV1NXVmFDMzEwbGsvYUE9PQ"</span>
 </code></pre>
 <p>This endpoint retrieves the access token used for authorizing a user.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>POST https://sso.empoweriam.com/oauth/v2/token</code></p>
+<p><code>POST https://sso.idplatform.com/oauth/v2/token</code></p>
 
 <!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 -->
@@ -571,7 +572,7 @@ ID | The ID of the kitten to retrieve
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.empoweriam.com/oauth/v2/token"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.idplatform.com/oauth/v2/token"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --data <span class="s2">"client_id=3542a382-60ef-4a49-85c4-30831fa1a474&amp;client_secret=4d045e04-7f76-4fea-8041-4430e53a440c&amp;refresh_token=cm50Nlo2T1dEdlp2SFpDZm5TTTVMOHoyR1lrMER6V1hKY2xrcFNWRS9RL3BsOXhvNTlrUnVuclN4K1Y5TUlaRw&amp;grant_type=refresh_token"</span>
 </code></pre>
@@ -589,7 +590,7 @@ ID | The ID of the kitten to retrieve
 </span></code></pre>
 <p>This endpoint refreshes an expired access token.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>POST https://sso.empoweriam.com/oauth/v2/token</code></p>
+<p><code>POST https://sso.idplatform.com/oauth/v2/token</code></p>
 
 <!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 -->
@@ -637,7 +638,7 @@ ID | The ID of the kitten to retrieve
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.empoweriam.com/oauth/v2/userinfo"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.idplatform.com/oauth/v2/userinfo"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --data <span class="s2">"access_token=eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJFbXBvd2VySUQiLCJzdWIiOiJwYXRyaWNrIiwiYXVkIjoiMzU0MmEzODItNjBlZi00YTQ5LTg1YzQtMzA4MzFmYTFhNDc0IiwiZXhwIjoxNTY4MTgyMDk0LCJuYmYiOjE1NjQ1ODIwOTQsImlhdCI6MTU2NDU4MjA5NCwianRpIjoiYTQyZTg4N2YtZjdlMy00MmQ3LThlZjAtZjU4MDIwZjFiMmM2IiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJkMzk5NzY1ZC1mY2Q3LTQ1YzktOTEzZi0yYjBjOWU2NWY4YjciLCJkaXNwbGF5TmFtZSI6IlBhdHJpY2sgUGFya2VyIiwiZW1haWwiOiJwYXRyaWNrQHBhdHJpY2twYXJrZXIuY29tIn19.lTEy42mU6zGwvGbDmwLXWbFuTtZ1jNesaPqwDL3gCp_Rh8gseJdJ_admy-gXaJ1V2oh2PP6WyIeBd93iPloR7k9-i10zdxL6zevA2LLUpoh_iisrnPS1wlw8LAehe7fAt3wvTPAxF5roNJAl3wI7_jOVoOh0FEtAFuXRahTPpecX98pyKINnz_dMSv0jQz0p8pEiNl_dQ5bvEs4R7DxUMzWXrgW0MPeKF4tvzbwBdIA5QIsknUeHb4nGBpaLV7S8upDX5X2BS1_AQwYkNzzQb8cs8Zb6XXqnnVnAW8tcCqJP8l0J2mUykQLqtFi57H-5FvRBpb0P49Fz_tm_-MTbdZkY8JWjUjbtbrJKHPNOQEgvkeKJXgeC8BpqouQpGBKgzvgdPVAEf0mIZeMtywn387PfGRLp4Ie_f0g8UsxZRTaEH4_f8j4kh9nhX82Sv2YQ8Kz_WJPpaTR1CR7yrzjz6k0w3GQnGZEeJE_IPIej7u4QKL-jCkOj_545fCvCh10mZ60-GrupkRnQucdnxuBOXRJxnOOgSRYi_zzchFLTigZQe7zOjm7zcEwWyrydn5O_hFk3JzjEy15DlmZWgvZqSs3T9IERAAIIBoHPq7UTXIpGMiFxJ8YfPOCUqXnLzhPz6xawFR-f5JDQzZvqWmK8vHrH1hqQmYCbk5Si6TaJGJ8"</span>
 </code></pre>
@@ -669,7 +670,7 @@ ID | The ID of the kitten to retrieve
 </span></code></pre>
 <p>This endpoint retrieves user information for a given access token.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
-<p><code>POST https://sso.empoweriam.com/oauth/v2/userinfo</code></p>
+<p><code>POST https://sso.idplatform.com/oauth/v2/userinfo</code></p>
 
 <!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 -->
@@ -705,7 +706,7 @@ ID | The ID of the kitten to retrieve
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.empoweriam.com/oauth/v2/tokeninfo"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.idplatform.com/oauth/v2/tokeninfo"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Basic MzU0MmEzODItNjBlZi00YTQ5LTg1YzQtMzA4MzFmYTFhNDc0OjRkMDQ1ZTA0LTdmNzYtNGZlYS04MDQxLTQ0MzBlNTNhNDQwYw=="</span> <span class="se">\</span>
   --data <span class="s2">"token=eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJFbXBvd2VySUQiLCJzdWIiOiJwYXRyaWNrIiwiYXVkIjoiMzU0MmEzODItNjBlZi00YTQ5LTg1YzQtMzA4MzFmYTFhNDc0IiwiZXhwIjoxNTY4MTgyMDk0LCJuYmYiOjE1NjQ1ODIwOTQsImlhdCI6MTU2NDU4MjA5NCwianRpIjoiYTQyZTg4N2YtZjdlMy00MmQ3LThlZjAtZjU4MDIwZjFiMmM2IiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJkMzk5NzY1ZC1mY2Q3LTQ1YzktOTEzZi0yYjBjOWU2NWY4YjciLCJkaXNwbGF5TmFtZSI6IlBhdHJpY2sgUGFya2VyIiwiZW1haWwiOiJwYXRyaWNrQHBhdHJpY2twYXJrZXIuY29tIn19.lTEy42mU6zGwvGbDmwLXWbFuTtZ1jNesaPqwDL3gCp_Rh8gseJdJ_admy-gXaJ1V2oh2PP6WyIeBd93iPloR7k9-i10zdxL6zevA2LLUpoh_iisrnPS1wlw8LAehe7fAt3wvTPAxF5roNJAl3wI7_jOVoOh0FEtAFuXRahTPpecX98pyKINnz_dMSv0jQz0p8pEiNl_dQ5bvEs4R7DxUMzWXrgW0MPeKF4tvzbwBdIA5QIsknUeHb4nGBpaLV7S8upDX5X2BS1_AQwYkNzzQb8cs8Zb6XXqnnVnAW8tcCqJP8l0J2mUykQLqtFi57H-5FvRBpb0P49Fz_tm_-MTbdZkY8JWjUjbtbrJKHPNOQEgvkeKJXgeC8BpqouQpGBKgzvgdPVAEf0mIZeMtywn387PfGRLp4Ie_f0g8UsxZRTaEH4_f8j4kh9nhX82Sv2YQ8Kz_WJPpaTR1CR7yrzjz6k0w3GQnGZEeJE_IPIej7u4QKL-jCkOj_545fCvCh10mZ60-GrupkRnQucdnxuBOXRJxnOOgSRYi_zzchFLTigZQe7zOjm7zcEwWyrydn5O_hFk3JzjEy15DlmZWgvZqSs3T9IERAAIIBoHPq7UTXIpGMiFxJ8YfPOCUqXnLzhPz6xawFR-f5JDQzZvqWmK8vHrH1hqQmYCbk5Si6TaJGJ8"</span>
@@ -728,7 +729,7 @@ ID | The ID of the kitten to retrieve
 </span></code></pre>
 <p>This endpoint retrieves token information for a given access token.</p>
 <h3 id='http-request-7'>HTTP Request</h3>
-<p><code>POST https://sso.empoweriam.com/oauth/v2/tokeninfo</code></p>
+<p><code>POST https://sso.idplatform.com/oauth/v2/tokeninfo</code></p>
 
 <!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 -->
@@ -804,14 +805,14 @@ ID | The ID of the kitten to retrieve
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.empoweriam.com/oauth/v2/tokenrevoke"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.idplatform.com/oauth/v2/tokenrevoke"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Basic cGF0cmljazpwQCQkdzByZA=="</span> <span class="se">\</span>
   --data <span class="s2">"token=bHdxdkFzY1gyenEwV3Z1aVQ4WUJhNzFJd1NJeU8zWDdlS3pEK3pwTFBKOWhRUHlDTDZ4MWg3WmMzQVpDNEdzR0xLbzZ3Tk9UUkJYZlRZS0R1OW8wZzVnV1J6TXovNXRtMnRwMEFxemVBeDY3K0UvbytoVnhRVHlVM1IybEVxTHVsdytUTXpyUTdzbkowOGRqUDdEY2lFc2V4YXZId3E3Q3c5VFJIUHQvNnFNdXdFRWFtU3RMM1B6bTBybnBNTW&amp;client_id=3542a382-60ef-4a49-85c4-30831fa1a474&amp;client_secret=4d045e04-7f76-4fea-8041-4430e53a440c"</span>
 </code></pre>
 <p>This endpoint revokes an access token.</p>
 <h3 id='http-request-8'>HTTP Request</h3>
-<p><code>POST https://sso.empoweriam.com/oauth/v2/tokenrevoke</code></p>
+<p><code>POST https://sso.idplatform.com/oauth/v2/tokenrevoke</code></p>
 
 <!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 -->
