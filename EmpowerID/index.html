@@ -524,7 +524,7 @@
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d399765d-fcd7-45c9-913f-2b0c9e65f8b7"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves the access token, ID token and refresh token for the password, which can be used in the POST Refresh Token, POST User Info and POST Token Info endpoints listed below.</p>
+<p>This endpoint retrieves the access token, ID token and refresh token for a given user name and password. The retrieved tokens can be used in the 1.0 POST Refresh Token, POST User Info and POST Token Info endpoints listed below, as well as the 2.0 Identity Administration endpoints.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>POST https://sso.empoweriam.com/oauth/v2/token</code></p>
 <h3 id='headers'>Headers</h3>
@@ -575,7 +575,7 @@
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --data <span class="s2">"client_id=3542a382-60ef-4a49-85c4-30831fa1a474&amp;client_secret=4d045e04-7f76-4fea-8041-4430e53a440c&amp;grant_type=authorization_code&amp;code=bW5lWmNYT0VxMnAxRFQwUFIwNy84czBpUkdDTTY2RitjRkFhd0JXUXVOM3MzUXZ4TlptYTgrdUw2akdVMDRSdGc2V1h6WjdOV1NXVmFDMzEwbGsvYUE9PQ"</span>
 </code></pre>
-<p>This endpoint retrieves the access token used for authorizing a user.</p>
+<p>This endpoint retrieves the access token for a given authorization code.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>POST https://sso.empoweriam.com/oauth/v2/token</code></p>
 <h3 id='headers-2'>Headers</h3>
@@ -591,7 +591,7 @@
 </tr>
 <tr>
 <td><strong>X-EmpowerID-API-Key</strong></td>
-<td>&lt;API Key supplied by EmpowerID&gt;</td>
+<td>API Key supplied by EmpowerID</td>
 </tr>
 </tbody></table>
 <h3 id='body-urlencoded-2'>Body <em>urlencoded</em></h3>
@@ -643,7 +643,7 @@
 </tr>
 <tr>
 <td><strong>X-EmpowerID-API-Key</strong></td>
-<td>&lt;API Key supplied by EmpowerID&gt;</td>
+<td>API Key supplied by EmpowerID</td>
 </tr>
 </tbody></table>
 <h3 id='body-urlencoded-3'>Body <em>urlencoded</em></h3>
@@ -699,7 +699,7 @@
 </tr>
 <tr>
 <td><strong>X-EmpowerID-API-Key</strong></td>
-<td>&lt;API Key supplied by EmpowerID&gt;</td>
+<td>API Key supplied by EmpowerID</td>
 </tr>
 </tbody></table>
 <h3 id='body-urlencoded-4'>Body <em>urlencoded</em></h3>
