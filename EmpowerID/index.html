@@ -394,7 +394,7 @@
   <strong>1.0 Authentication</strong> - creating and managing access tokens<br>
   <strong>2.0 Identity Administration</strong> - querying and managing identities in the Empower Identity Warehouse and all connected systems</p>
 <h1 id='authorization'>Authorization</h1>
-<p>In order to make an authenticated call to EmpowerID SCIM VDS API, you must include your access token with the call. OAuth2 uses a BEARER token that is passed along in an Authorization header. The access token is obtained using the POST Access Token (Password) API call.</p>
+<p>In order to make an authenticated call to EmpowerID SCIM VDS API, you must include your access token with the call. OAuth2 uses a BEARER token that is passed along in an Authorization header. In most cases, the access token is obtained using the POST Access Token (Password) API call.</p>
 
 <p>The POST Access Token endpoint and others listed below require an API key, which you can request on our <a href="https://docs.empowerid.com/2016/dev/webapi/quickstart">QuickStart Page</a>.</p>
 <h1 id='1-0-authentication'>1.0 Authentication</h1>
@@ -630,7 +630,13 @@
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --data <span class="s2">"client_id=3542a382-60ef-4a49-85c4-30831fa1a474&amp;client_secret=4d045e04-7f76-4fea-8041-4430e53a440c&amp;grant_type=authorization_code&amp;code=bW5lWmNYT0VxMnAxRFQwUFIwNy84czBpUkdDTTY2RitjRkFhd0JXUXVOM3MzUXZ4TlptYTgrdUw2akdVMDRSdGc2V1h6WjdOV1NXVmFDMzEwbGsvYUE9PQ"</span>
 </code></pre>
-<p>This endpoint retrieves the access token for a given authorization code.</p>
+<p>This endpoint retrieves the access token for a given authorization code. The Authorization Code grant type is used by web and mobile apps. It differs from other grant types in that it first requires that the app launch a browser. The basic process is as follows:<br>
+ <ol>
+   <li>The application opens a browser to direct the user to the OAuth Server.</li>
+   <li>An authorization prompt is displayed to the user who approves the request from the application.</li>
+   <li>The user is redirected back to the application with an authorization code in the query string.</li>
+   <li>The application exchanges the authorization code for an access token.</li>
+ </ol>  </p>
 <h4 id='http-request-4'>HTTP Request</h4>
 <p><code>POST https://sso.empoweriam.com/oauth/v2/token</code></p>
 <h4 id='headers-2'>Headers</h4>
@@ -681,7 +687,9 @@
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --header <span class="s2">"X-EmpowerID-API-Key: &lt;OAuth application API Key&gt;"</span> <span class="se">\</span>
   --data <span class="s2">"client_id=%3COAuth%20application%20Client%20ID%3E&amp;client_secret=%3COAuth%20application%20Client%20Secret%3E&amp;grant_type=client_credentials&amp;scope=openid&amp;response_type=id_token%20token"</span>
-</code></pre><h4 id='http-request-5'>HTTP Request</h4>
+</code></pre>
+<p>This endpoint is used by clients to obtain an access token outside the context of a user. It is typically used by clients to access their own resources rather than another user&#39;s resources.</p>
+<h4 id='http-request-5'>HTTP Request</h4>
 <p><code>POST https://sso.empoweriam.com/oauth/v2/token</code></p>
 <h4 id='headers-3'>Headers</h4>
 <table><thead>
@@ -735,7 +743,14 @@
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --header <span class="s2">"X-EmpowerID-API-Key: &lt;OAuth application API Key&gt;"</span> <span class="se">\</span>
   --data <span class="s2">"assertion=%3CSAML%20assertion%3E&amp;grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Asaml2-bearer&amp;scope=openid"</span>
-</code></pre><h4 id='http-request-6'>HTTP Request</h4>
+</code></pre>
+<p>This endpoint enables clients using existing SAML SSO and IdP infrastructure to obtain OAuth 2.0 tokens for accessing protected resources such as web APIs. The basic process is as follows:
+<ol>
+  <li>A user initiates a login to an application.</li>
+  <li>The application as a SAML 2.0 SP redirects the user to the SAML 2.0 IdP and receives a SAML assertion on success.</li>
+  <li>If access to an OAuth 2.0 protected resource (e.g. a web API) is required, the client exchanges the SAML 2.0 assertion for an access token at the <a href="https://connect2id.com/products/server/docs/api/token">token endpoint</a> of the Connect2id server.</li>
+</ol></p>
+<h4 id='http-request-6'>HTTP Request</h4>
 <p><code>POST https://sso.empoweriam.com/oauth/v2/token</code></p>
 <h4 id='headers-4'>Headers</h4>
 <table><thead>
@@ -1082,7 +1097,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/08028F9F-84E0-43EB-BB43-A5506C3B35C7/Users/?filter=deleted%20eq%200"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/08028F9F-84E0-43EB-BB43-A5506C3B35C7/Users/?filter=Id%20eq%201234"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6InQ3X2JIb3RRT3FpOVRZSjl5bWg1RGprMWlIYyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJFbXBvd2VySUQiLCJzdWIiOiJlbXBvd2VyaWRhZG1pbiIsImF1ZCI6ImIzNDBjM2ZlLTU4M2YtNDY3Ni1hNzZjLTYxOWEyNDIxYTQ5NSIsImV4cCI6MTU2NjQwMzE1MCwibmJmIjoxNTY2Mzk5NTUwLCJpYXQiOjE1NjYzOTk1NTAsImp0aSI6ImY3NGE0MDFiLWE5YzMtNGEwMS1iZjQ0LTU5ZjhkNTljYjRmZSIsImF0dHJpYiI6eyJwZXJzb25HdWlkIjoiZWMyODgzZmQtYWFhYS00N2MyLWE2NWUtZWE3MzM1NjkwYjMyIiwiZGlzcGxheU5hbWUiOiJFbXBvd2VySUQgQWRtaW4iLCJlbWFpbCI6bnVsbH19.R7tjFKZW1jeb_Q9Giex-KRgnvWd9LNfC21BaxCV5Vp0JOYv8zLyk4X9N2bH6rgXbP5FYHeE8w7Mw4za6s_nRlfiPXSwsKTj_rvWxufakCnvx9BmJOzsaCDg7myaCf42zBnNkAuhjnsNLqYIGO9kgkoA4nkciG-C1AHcyHgZbAjVhJKOVMi9jiSdN9mU5Kn4yx9XSWIgbHbqyFDS_-EPQtkvaUrA_U7KxI35pLEK8lC73K7_Wfda6bv7HTRVK1CSshIZeafiit4mpyKueagnzRU969K7ISWQ6wwQdTvPHqL1RsYtY8GEB6tEPh_yNsLfkYj8wyLgXZyQLg_rGL7j7jA"</span> <span class="se">\</span>
   --data <span class="s2">""</span>
 </code></pre>
@@ -1483,7 +1498,7 @@
 </span></code></pre>
 <p>This endpoint retrieves account information for a given user account, based on the specified filters.</p>
 <h4 id='http-request-12'>HTTP Request</h4>
-<p><code>GET http://40.83.12.251:80/v1/{AccountStoreGuid}/Users/?filter={filter, e.g. &#39;deleted eq 0&#39;}</code></p>
+<p><code>GET http://40.83.12.251:80/v1/{AccountStoreGuid}/Users/?filter={filter, e.g. &#39;Id eq 1234&#39;}</code></p>
 <h4 id='headers-10'>Headers</h4>
 <table><thead>
 <tr>
@@ -1505,7 +1520,11 @@
 </thead><tbody>
 <tr>
 <td><strong>filter</strong></td>
-<td>{filter, e.g. &#39;deleted eq 0&#39;}</td>
+<td>{filter, e.g. &#39;Id eq 1234&#39;}</td>
+</tr>
+<tr>
+<td></td>
+<td>Possible filters are: GivenName, FamilyName, UserName, Active, HonorificSuffix, MiddleName, Id, FriendlyName, OrganizationId, Title, Division, Department, EmployeeType, LocaleId, PreferredLanguage, EmployeeId</td>
 </tr>
 </tbody></table>
 <h3 id='patch-update-account'>PATCH Update Account</h3>
@@ -1570,7 +1589,7 @@
         {
             </span><span class="se">\"</span><span class="s2">op</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">add</span><span class="se">\"</span><span class="s2">,
             </span><span class="se">\"</span><span class="s2">path</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">phoneNumbers</span><span class="se">\"</span><span class="s2">,
-            </span><span class="se">\"</span><span class="s2">value</span><span class="se">\"</span><span class="s2">:{
+              </span><span class="se">\"</span><span class="s2">value</span><span class="se">\"</span><span class="s2">:{
                 </span><span class="se">\"</span><span class="s2">telephone</span><span class="se">\"</span><span class="s2"> : </span><span class="se">\"</span><span class="s2">new value</span><span class="se">\"</span><span class="s2">,
                 </span><span class="se">\"</span><span class="s2">mobilephone</span><span class="se">\"</span><span class="s2"> : </span><span class="se">\"</span><span class="s2">new value</span><span class="se">\"</span><span class="s2">,
                 </span><span class="se">\"</span><span class="s2">work</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">new value</span><span class="se">\"</span><span class="s2">
@@ -1820,13 +1839,13 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/%7BAGuid%20of%20Empowerid%7D/Users/?filter=deleted%20eq%200"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/%7BAGuid%20of%20Empowerid%7D/Users/?filter=Id%20eq%201234"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6IkRhaXN5WHVlIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNzY0NzI4LCJuYmYiOjE1NjE3Mjg3MjgsImlhdCI6MTU2MTcyODcyOCwianRpIjoiMjBkZjg3NTItNTg3Yy00YTllLTk4MDgtYjNlMDAyNGY1NWRkIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJhMGJjZjdhNS0wMDMxLTQzMjAtYjY1MC01ZTY2MTYxN2M0ZWEiLCJkaXNwbGF5TmFtZSI6Ilh1ZSwgRGFpc3kiLCJlbWFpbCI6IjEyM0AxMjMuY29tIn19.Wt9ad0eOsvQyMfjH7wgW3HFR2hh5DWRyNxI1DvfV59slQjVOAywFYfgftupEX3X6AnboCQ9fB8Y7lnjxz4egaV7zCRWt7cIA59eticQ-rEfBFkGwLZeBkMbyc884QCZlac9UJWEBD-rRxoa_iQTsWIM_xLqEOlwKUAatAmzA__4VkpkTEiNShyoAShCo0vPQ9UEpBho7nMyczYxW6U-gqDBSFUT6MRE95XFvvXS9CH4X8MAKaILzeje_DYIdAVhwntzIp7n3L64ZmNqw_9NWpaEs_vZ0oiwVA4FVQHoyBinyHhcUI6wtEXiWJZmxrSSfwCnNjEklSymJPniJuKpJPpIvgcCmvPZYFchwBVFTeaN6nI7y7AnQ_mCE3K1CJlW1TdEMmbQ2k9O_vHmmZIepUxPYhjnOkBE_fbAWt79n9TPfY9GUaWKUamWXoAUGXyzJomxscMuOBaDMM5lbWp9fb-1KA5ds8SgHEMDRQ3xQigIU-M8CEHGBnQ2WNC3WltCUIdvkYZmwxWfRNlMFT0KwcGXA0EAvogTDAIb-Rtn5Do4T8AbMsACwjYdJrEqJQ20g0Oy9AGuSd74zNTJkpsEuK_Bv5V8DWsPQE4bxHeTAK3zDLRyebWYONrZzSVYmLc_u1jecruw4g3rJtbfN6QoU2FLUwm4QFVYSyUgQY3UUUhM"</span> <span class="se">\</span>
   --data <span class="s2">""</span>
 </code></pre>
 <p>This endpoint retrieves person object information from the EmpowerID Identity Warehouse, based on the specified filters.</p>
 <h4 id='http-request-17'>HTTP Request</h4>
-<p><code>GET http://40.83.12.251:80/v1/{AccountStoreGuid}/Users/?filter={filter, e.g. &#39;deleted eq 0&#39;}</code></p>
+<p><code>GET http://40.83.12.251:80/v1/{AccountStoreGuid}/Users/?filter={filter, e.g. &#39;Id eq 1234&#39;}</code></p>
 
 <aside class="notice">Replace <em>AccountStoreGuid</em> with the EmpowerID GUID.</aside>
 <h4 id='headers-15'>Headers</h4>
@@ -1850,7 +1869,11 @@
 </thead><tbody>
 <tr>
 <td><strong>filter</strong></td>
-<td>{filter, e.g. &#39;deleted eq 0&#39;}</td>
+<td>{filter, e.g. &#39;Id eq 1234&#39;}</td>
+</tr>
+<tr>
+<td></td>
+<td>Possible filters are: GivenName, FamilyName, UserName, Active, HonorificSuffix, MiddleName, Id, FriendlyName, OrganizationId, Title, Division, Department, EmployeeType, LocaleId, PreferredLanguage, EmployeeId</td>
 </tr>
 </tbody></table>
 <h3 id='patch-update-person'>PATCH Update Person</h3>
@@ -2200,12 +2223,12 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/08028F9F-84E0-43EB-BB43-A5506C3B35C7/Groups/?filter=deleted%20eq%200"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/08028F9F-84E0-43EB-BB43-A5506C3B35C7/Groups/?filter=Id%20eq%201234"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span>
 </code></pre>
 <p>This endpoint retrieves group information for a given user group, based on the specified filters.</p>
 <h4 id='http-request-22'>HTTP Request</h4>
-<p><code>GET http://40.83.12.251:80/v1/{AccountStoreGuid}/Groups/?filter={filter, e.g. deleted eq 0}</code></p>
+<p><code>GET http://40.83.12.251:80/v1/{AccountStoreGuid}/Groups/?filter={filter, e.g. Id eq 1234}</code></p>
 <h4 id='headers-20'>Headers</h4>
 <table><thead>
 <tr>
@@ -2227,7 +2250,11 @@
 </thead><tbody>
 <tr>
 <td><strong>filter</strong></td>
-<td>{filter, e.g. &#39;deleted eq 0&#39;}</td>
+<td>{filter, e.g. &#39;Id eq 1234&#39;}</td>
+</tr>
+<tr>
+<td></td>
+<td>Possible filters are: DisplayName, Id</td>
 </tr>
 </tbody></table>
 <h3 id='patch-update-group'>PATCH Update Group</h3>
@@ -2462,7 +2489,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"http://40.83.12.251:80/v1/%7BAccountStoreGuid,%20guid%20of%20empowerid%7D/Groups"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"http://40.83.12.251:80/v1/%7BGuid%20of%20Empowerid%7D/Groups"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span> <span class="se">\</span>
   --data <span class="s2">"{
@@ -2478,7 +2505,9 @@
 </code></pre>
 <p>This endpoint creates a new Management Role in the EmpowerID Identity Warehouse.</p>
 <h4 id='http-request-28'>HTTP Request</h4>
-<p><code>POST http://40.83.12.251:80/v1/{AccountStoreGuid, EmpowerIDGuid}/Groups</code></p>
+<p><code>POST http://40.83.12.251:80/v1/{AccountStoreGuid}/Groups</code></p>
+
+<aside class="notice">Replace <em>AccountStoreGuid</em> with the EmpowerID GUID.</aside>
 <h4 id='headers-26'>Headers</h4>
 <table><thead>
 <tr>
@@ -2514,12 +2543,14 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s2">"http://40.83.12.251:80/v1/%7BAccountStoreGuid,%20guid%20of%20empowerid%7D/Groups/%7BManagementRoleGuid%7D"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s2">"http://40.83.12.251:80/v1/%7BGuid%20of%20Empowerid%7D/Groups/%7BManagementRoleGuid%7D"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span>
 </code></pre>
 <p>This endpoint deletes the specified Management Role from the EmpowerID Identity Warehouse.</p>
 <h4 id='http-request-29'>HTTP Request</h4>
-<p><code>DEL http://40.83.12.251:80/v1/{AccountStoreGuid, EmpowerIDGuid}/Groups/{ManagementRoleGuid}</code></p>
+<p><code>DEL http://40.83.12.251:80/v1/{AccountStoreGuid}/Groups/{ManagementRoleGuid}</code></p>
+
+<aside class="notice">Replace <em>AccountStoreGuid</em> with the EmpowerID GUID.</aside>
 <h4 id='headers-27'>Headers</h4>
 <table><thead>
 <tr>
@@ -2536,12 +2567,14 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/%7BAccountStoreGuid,%20guid%20of%20empowerid%7D/Groups/%7BOrgRoleOrgZoneGuid%7D"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/%7BAccountStoreGuid%7D/Groups/%7BOrgRoleOrgZoneGuid%7D"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span>
 </code></pre>
 <p>This endpoint retrieves Business Role and Location information from the EmpowerID Identity Warehouse.</p>
 <h4 id='http-request-30'>HTTP Request</h4>
-<p><code>GET http://40.83.12.251:80/v1/{AccountStoreGuid, EmpowerIDGuid}/Groups/{OrgRoleOrgZoneGuid}</code></p>
+<p><code>GET http://40.83.12.251:80/v1/{AccountStoreGuid}/Groups/{OrgRoleOrgZoneGuid}</code></p>
+
+<aside class="notice">Replace <em>AccountStoreGuid</em> with the EmpowerID GUID.</aside>
 <h4 id='headers-28'>Headers</h4>
 <table><thead>
 <tr>
@@ -2558,7 +2591,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request PATCH <span class="s2">"http://40.83.12.251:80/v1/%7BAccountStoreGuid,%20guid%20of%20empowerid%7D/Groups/%7BOrgRoleOrgZoneGuid%7D"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request PATCH <span class="s2">"http://40.83.12.251:80/v1/%7BGuid%20of%20Empowerid%7D/Groups/%7BOrgRoleOrgZoneGuid%7D"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span> <span class="se">\</span>
   --data <span class="s2">"{
@@ -2581,7 +2614,9 @@
 </code></pre>
 <p>This endpoint updates Business Role and Location information in the EmpowerID Identity Warehouse.</p>
 <h4 id='http-request-31'>HTTP Request</h4>
-<p><code>PATCH http://40.83.12.251:80/v1/{AccountStoreGuid, EmpowerIDGuid}/Groups/{OrgRoleOrgZoneGuid}</code></p>
+<p><code>PATCH http://40.83.12.251:80/v1/{AccountStoreGui}/Groups/{OrgRoleOrgZoneGuid}</code></p>
+
+<aside class="notice">Replace <em>AccountStoreGuid</em> with the EmpowerID GUID.</aside>
 <h4 id='headers-29'>Headers</h4>
 <table><thead>
 <tr>
