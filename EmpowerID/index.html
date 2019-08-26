@@ -403,19 +403,19 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"https://sso.empoweriam.com/oauth/.well-known/openid-configuration"</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/.well-known/openid-configuration"</span>
 </code></pre>
 <blockquote>
 <p>Example response</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.empoweriam.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"jwks_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.empoweriam.com/oauth/.well-known/jwks"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"authorization_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.empoweriam.com/oauth/v2/ui/authorize"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"token_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.empoweriam.com/oauth/v2/token"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"userinfo_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.empoweriam.com/oauth/v2/userinfo"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"tokeninfo_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.empoweriam.com/oauth/v2/tokeninfo"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"tokenrevoke_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.empoweriam.com/oauth/v2/tokenrevoke"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://creditsuisse-dev.empowerid.net"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jwks_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/.well-known/jwks"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"authorization_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/v2/ui/authorize"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/v2/token"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"userinfo_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/v2/userinfo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tokeninfo_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/v2/tokeninfo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tokenrevoke_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/v2/tokenrevoke"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"scopes_supported"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="s2">"openid"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"profile"</span><span class="p">,</span><span class="w">
@@ -463,12 +463,12 @@
 </span></code></pre>
 <p>This endpoint retrieves configuration data for a tenant.</p>
 <h4 id='http-request'>HTTP Request</h4>
-<p><code>GET https://sso.empoweriam.com/oauth/.well-known/openid-configuration</code></p>
+<p><code>GET https://creditsuisse-dev.empowerid.net/oauth/.well-known/openid-configuration</code></p>
 <h3 id='get-openid-connect-web-keys'>Get OpenID Connect Web Keys</h3>
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"https://sso.empoweriam.com/oauth/.well-known/jwks"</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/.well-known/jwks"</span>
 </code></pre>
 <blockquote>
 <p>Example response</p>
@@ -557,12 +557,12 @@
 </span></code></pre>
 <p>This endpoint retrieves public keys.</p>
 <h4 id='http-request-2'>HTTP Request</h4>
-<p><code>GET https://sso.empoweriam.com/oauth/.well-known/jwks</code></p>
+<p><code>GET https://creditsuisse-dev.empowerid.net/oauth/.well-known/jwks</code></p>
 <h3 id='post-access-token-password'>POST Access Token (Password)</h3>
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.empoweriam.com/oauth/v2/token"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/v2/token"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Basic cGF0cmljazpwQCQkdzByZA=="</span> <span class="se">\</span>
   --data <span class="s2">"client_id=3542a382-60ef-4a49-85c4-30831fa1a474&amp;client_secret=4d045e04-7f76-4fea-8041-4430e53a440c&amp;grant_type=password&amp;scope=openid"</span>
@@ -581,7 +581,7 @@
 </span></code></pre>
 <p>This endpoint retrieves the access token, ID token and refresh token for a given user name and password. The retrieved tokens can be used in the 1.0 POST Refresh Token, POST User Info and POST Token Info endpoints listed below, as well as the 2.0 Identity Administration endpoints.</p>
 <h4 id='http-request-3'>HTTP Request</h4>
-<p><code>POST https://sso.empoweriam.com/oauth/v2/token</code></p>
+<p><code>POST https://creditsuisse-dev.empowerid.net/oauth/v2/token</code></p>
 <h4 id='headers'>Headers</h4>
 <table><thead>
 <tr>
@@ -626,7 +626,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.empoweriam.com/oauth/v2/token"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/v2/token"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --data <span class="s2">"client_id=3542a382-60ef-4a49-85c4-30831fa1a474&amp;client_secret=4d045e04-7f76-4fea-8041-4430e53a440c&amp;grant_type=authorization_code&amp;code=bW5lWmNYT0VxMnAxRFQwUFIwNy84czBpUkdDTTY2RitjRkFhd0JXUXVOM3MzUXZ4TlptYTgrdUw2akdVMDRSdGc2V1h6WjdOV1NXVmFDMzEwbGsvYUE9PQ"</span>
 </code></pre>
@@ -638,7 +638,7 @@
    <li>The application exchanges the authorization code for an access token.</li>
  </ol>  </p>
 <h4 id='http-request-4'>HTTP Request</h4>
-<p><code>POST https://sso.empoweriam.com/oauth/v2/token</code></p>
+<p><code>POST https://creditsuisse-dev.empowerid.net/oauth/v2/token</code></p>
 <h4 id='headers-2'>Headers</h4>
 <table><thead>
 <tr>
@@ -683,14 +683,14 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.empoweriam.com/oauth/v2/token"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/v2/token"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --header <span class="s2">"X-EmpowerID-API-Key: &lt;OAuth application API Key&gt;"</span> <span class="se">\</span>
   --data <span class="s2">"client_id=%3COAuth%20application%20Client%20ID%3E&amp;client_secret=%3COAuth%20application%20Client%20Secret%3E&amp;grant_type=client_credentials&amp;scope=openid&amp;response_type=id_token%20token"</span>
 </code></pre>
 <p>This endpoint is used by clients to obtain an access token outside the context of a user. It is typically used by clients to access their own resources rather than another user&#39;s resources.</p>
 <h4 id='http-request-5'>HTTP Request</h4>
-<p><code>POST https://sso.empoweriam.com/oauth/v2/token</code></p>
+<p><code>POST https://creditsuisse-dev.empowerid.net/oauth/v2/token</code></p>
 <h4 id='headers-3'>Headers</h4>
 <table><thead>
 <tr>
@@ -739,7 +739,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.empoweriam.com/oauth/v2/token"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/v2/token"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --header <span class="s2">"X-EmpowerID-API-Key: &lt;OAuth application API Key&gt;"</span> <span class="se">\</span>
   --data <span class="s2">"assertion=%3CSAML%20assertion%3E&amp;grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Asaml2-bearer&amp;scope=openid"</span>
@@ -751,7 +751,7 @@
   <li>If access to an OAuth 2.0 protected resource (e.g. a web API) is required, the client exchanges the SAML 2.0 assertion for an access token at the <a href="https://connect2id.com/products/server/docs/api/token">token endpoint</a> of the Connect2id server.</li>
 </ol></p>
 <h4 id='http-request-6'>HTTP Request</h4>
-<p><code>POST https://sso.empoweriam.com/oauth/v2/token</code></p>
+<p><code>POST https://creditsuisse-dev.empowerid.net/oauth/v2/token</code></p>
 <h4 id='headers-4'>Headers</h4>
 <table><thead>
 <tr>
@@ -792,7 +792,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.empoweriam.com/oauth/v2/token"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/v2/token"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --data <span class="s2">"client_id=%3COAuth%20application%20Client%20ID%3E&amp;client_secret=%3COAuth%20application%20Client%20Secret%3E&amp;refresh_token=OXJqUUx5elBSWFg1dVhZUHR1YUE2Y2xYU3VQMm95amtnNXc2R3pvRit3ZGlIZzRjYk5hWE5EU2tEVlBSd3ZIRw&amp;grant_type=refresh_token"</span>
 </code></pre>
@@ -810,7 +810,7 @@
 </span></code></pre>
 <p>This endpoint refreshes an expired access token.</p>
 <h4 id='http-request-7'>HTTP Request</h4>
-<p><code>POST https://sso.empoweriam.com/oauth/v2/token</code></p>
+<p><code>POST https://creditsuisse-dev.empowerid.net/oauth/v2/token</code></p>
 <h4 id='headers-5'>Headers</h4>
 <table><thead>
 <tr>
@@ -851,7 +851,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.empoweriam.com/oauth/v2/userinfo"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/v2/userinfo"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --data <span class="s2">"access_token=eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJFbXBvd2VySUQiLCJzdWIiOiJwYXRyaWNrIiwiYXVkIjoiMzU0MmEzODItNjBlZi00YTQ5LTg1YzQtMzA4MzFmYTFhNDc0IiwiZXhwIjoxNTY4MTgyMDk0LCJuYmYiOjE1NjQ1ODIwOTQsImlhdCI6MTU2NDU4MjA5NCwianRpIjoiYTQyZTg4N2YtZjdlMy00MmQ3LThlZjAtZjU4MDIwZjFiMmM2IiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJkMzk5NzY1ZC1mY2Q3LTQ1YzktOTEzZi0yYjBjOWU2NWY4YjciLCJkaXNwbGF5TmFtZSI6IlBhdHJpY2sgUGFya2VyIiwiZW1haWwiOiJwYXRyaWNrQHBhdHJpY2twYXJrZXIuY29tIn19.lTEy42mU6zGwvGbDmwLXWbFuTtZ1jNesaPqwDL3gCp_Rh8gseJdJ_admy-gXaJ1V2oh2PP6WyIeBd93iPloR7k9-i10zdxL6zevA2LLUpoh_iisrnPS1wlw8LAehe7fAt3wvTPAxF5roNJAl3wI7_jOVoOh0FEtAFuXRahTPpecX98pyKINnz_dMSv0jQz0p8pEiNl_dQ5bvEs4R7DxUMzWXrgW0MPeKF4tvzbwBdIA5QIsknUeHb4nGBpaLV7S8upDX5X2BS1_AQwYkNzzQb8cs8Zb6XXqnnVnAW8tcCqJP8l0J2mUykQLqtFi57H-5FvRBpb0P49Fz_tm_-MTbdZkY8JWjUjbtbrJKHPNOQEgvkeKJXgeC8BpqouQpGBKgzvgdPVAEf0mIZeMtywn387PfGRLp4Ie_f0g8UsxZRTaEH4_f8j4kh9nhX82Sv2YQ8Kz_WJPpaTR1CR7yrzjz6k0w3GQnGZEeJE_IPIej7u4QKL-jCkOj_545fCvCh10mZ60-GrupkRnQucdnxuBOXRJxnOOgSRYi_zzchFLTigZQe7zOjm7zcEwWyrydn5O_hFk3JzjEy15DlmZWgvZqSs3T9IERAAIIBoHPq7UTXIpGMiFxJ8YfPOCUqXnLzhPz6xawFR-f5JDQzZvqWmK8vHrH1hqQmYCbk5Si6TaJGJ8"</span>
 </code></pre>
@@ -883,7 +883,7 @@
 </span></code></pre>
 <p>This endpoint retrieves user information for a given access token.</p>
 <h4 id='http-request-8'>HTTP Request</h4>
-<p><code>POST https://sso.empoweriam.com/oauth/v2/userinfo</code></p>
+<p><code>POST https://creditsuisse-dev.empowerid.net/oauth/v2/userinfo</code></p>
 <h4 id='headers-6'>Headers</h4>
 <table><thead>
 <tr>
@@ -912,7 +912,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.empoweriam.com/oauth/v2/tokeninfo"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/v2/tokeninfo"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Basic MzU0MmEzODItNjBlZi00YTQ5LTg1YzQtMzA4MzFmYTFhNDc0OjRkMDQ1ZTA0LTdmNzYtNGZlYS04MDQxLTQ0MzBlNTNhNDQwYw=="</span> <span class="se">\</span>
   --data <span class="s2">"token=eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJFbXBvd2VySUQiLCJzdWIiOiJwYXRyaWNrIiwiYXVkIjoiMzU0MmEzODItNjBlZi00YTQ5LTg1YzQtMzA4MzFmYTFhNDc0IiwiZXhwIjoxNTY4MTgyMDk0LCJuYmYiOjE1NjQ1ODIwOTQsImlhdCI6MTU2NDU4MjA5NCwianRpIjoiYTQyZTg4N2YtZjdlMy00MmQ3LThlZjAtZjU4MDIwZjFiMmM2IiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJkMzk5NzY1ZC1mY2Q3LTQ1YzktOTEzZi0yYjBjOWU2NWY4YjciLCJkaXNwbGF5TmFtZSI6IlBhdHJpY2sgUGFya2VyIiwiZW1haWwiOiJwYXRyaWNrQHBhdHJpY2twYXJrZXIuY29tIn19.lTEy42mU6zGwvGbDmwLXWbFuTtZ1jNesaPqwDL3gCp_Rh8gseJdJ_admy-gXaJ1V2oh2PP6WyIeBd93iPloR7k9-i10zdxL6zevA2LLUpoh_iisrnPS1wlw8LAehe7fAt3wvTPAxF5roNJAl3wI7_jOVoOh0FEtAFuXRahTPpecX98pyKINnz_dMSv0jQz0p8pEiNl_dQ5bvEs4R7DxUMzWXrgW0MPeKF4tvzbwBdIA5QIsknUeHb4nGBpaLV7S8upDX5X2BS1_AQwYkNzzQb8cs8Zb6XXqnnVnAW8tcCqJP8l0J2mUykQLqtFi57H-5FvRBpb0P49Fz_tm_-MTbdZkY8JWjUjbtbrJKHPNOQEgvkeKJXgeC8BpqouQpGBKgzvgdPVAEf0mIZeMtywn387PfGRLp4Ie_f0g8UsxZRTaEH4_f8j4kh9nhX82Sv2YQ8Kz_WJPpaTR1CR7yrzjz6k0w3GQnGZEeJE_IPIej7u4QKL-jCkOj_545fCvCh10mZ60-GrupkRnQucdnxuBOXRJxnOOgSRYi_zzchFLTigZQe7zOjm7zcEwWyrydn5O_hFk3JzjEy15DlmZWgvZqSs3T9IERAAIIBoHPq7UTXIpGMiFxJ8YfPOCUqXnLzhPz6xawFR-f5JDQzZvqWmK8vHrH1hqQmYCbk5Si6TaJGJ8"</span>
@@ -935,7 +935,7 @@
 </span></code></pre>
 <p>This endpoint retrieves token information for a given access token.</p>
 <h4 id='http-request-9'>HTTP Request</h4>
-<p><code>POST https://sso.empoweriam.com/oauth/v2/tokeninfo</code></p>
+<p><code>POST https://creditsuisse-dev.empowerid.net/oauth/v2/tokeninfo</code></p>
 <h4 id='headers-7'>Headers</h4>
 <table><thead>
 <tr>
@@ -984,14 +984,14 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://sso.empoweriam.com/oauth/v2/tokenrevoke"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"https://creditsuisse-dev.empowerid.net/oauth/v2/tokenrevoke"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Basic cGF0cmljazpwQCQkdzByZA=="</span> <span class="se">\</span>
   --data <span class="s2">"token=bHdxdkFzY1gyenEwV3Z1aVQ4WUJhNzFJd1NJeU8zWDdlS3pEK3pwTFBKOWhRUHlDTDZ4MWg3WmMzQVpDNEdzR0xLbzZ3Tk9UUkJYZlRZS0R1OW8wZzVnV1J6TXovNXRtMnRwMEFxemVBeDY3K0UvbytoVnhRVHlVM1IybEVxTHVsdytUTXpyUTdzbkowOGRqUDdEY2lFc2V4YXZId3E3Q3c5VFJIUHQvNnFNdXdFRWFtU3RMM1B6bTBybnBNTW&amp;client_id=3542a382-60ef-4a49-85c4-30831fa1a474&amp;client_secret=4d045e04-7f76-4fea-8041-4430e53a440c"</span>
 </code></pre>
 <p>This endpoint revokes an access token.</p>
 <h4 id='http-request-10'>HTTP Request</h4>
-<p><code>POST https://sso.empoweriam.com/oauth/v2/tokenrevoke</code></p>
+<p><code>POST https://creditsuisse-dev.empowerid.net/oauth/v2/tokenrevoke</code></p>
 <h4 id='headers-8'>Headers</h4>
 <table><thead>
 <tr>
@@ -1038,7 +1038,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/08028F9F-84E0-43EB-BB43-A5506C3B35C7/Users/7FF0113F-2CE0-4422-8CA1-9E9C271F5000"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/1C31542A-73B6-46A9-A701-816F2599BF46/Users/5BEB4AB8-5F74-4D1C-91B6-3FCCC93D356A"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6InQ3X2JIb3RRT3FpOVRZSjl5bWg1RGprMWlIYyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJFbXBvd2VySUQiLCJzdWIiOiJlbXBvd2VyaWRhZG1pbiIsImF1ZCI6ImIzNDBjM2ZlLTU4M2YtNDY3Ni1hNzZjLTYxOWEyNDIxYTQ5NSIsImV4cCI6MTU2NjQwMzE1MCwibmJmIjoxNTY2Mzk5NTUwLCJpYXQiOjE1NjYzOTk1NTAsImp0aSI6ImY3NGE0MDFiLWE5YzMtNGEwMS1iZjQ0LTU5ZjhkNTljYjRmZSIsImF0dHJpYiI6eyJwZXJzb25HdWlkIjoiZWMyODgzZmQtYWFhYS00N2MyLWE2NWUtZWE3MzM1NjkwYjMyIiwiZGlzcGxheU5hbWUiOiJFbXBvd2VySUQgQWRtaW4iLCJlbWFpbCI6bnVsbH19.R7tjFKZW1jeb_Q9Giex-KRgnvWd9LNfC21BaxCV5Vp0JOYv8zLyk4X9N2bH6rgXbP5FYHeE8w7Mw4za6s_nRlfiPXSwsKTj_rvWxufakCnvx9BmJOzsaCDg7myaCf42zBnNkAuhjnsNLqYIGO9kgkoA4nkciG-C1AHcyHgZbAjVhJKOVMi9jiSdN9mU5Kn4yx9XSWIgbHbqyFDS_-EPQtkvaUrA_U7KxI35pLEK8lC73K7_Wfda6bv7HTRVK1CSshIZeafiit4mpyKueagnzRU969K7ISWQ6wwQdTvPHqL1RsYtY8GEB6tEPh_yNsLfkYj8wyLgXZyQLg_rGL7j7jA"</span> <span class="se">\</span>
   --data <span class="s2">""</span>
 </code></pre>
@@ -1097,7 +1097,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/08028F9F-84E0-43EB-BB43-A5506C3B35C7/Users/?filter=Id%20eq%201234"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/1C31542A-73B6-46A9-A701-816F2599BF46/Users/?filter=Id%20eq%201234"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6InQ3X2JIb3RRT3FpOVRZSjl5bWg1RGprMWlIYyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJFbXBvd2VySUQiLCJzdWIiOiJlbXBvd2VyaWRhZG1pbiIsImF1ZCI6ImIzNDBjM2ZlLTU4M2YtNDY3Ni1hNzZjLTYxOWEyNDIxYTQ5NSIsImV4cCI6MTU2NjQwMzE1MCwibmJmIjoxNTY2Mzk5NTUwLCJpYXQiOjE1NjYzOTk1NTAsImp0aSI6ImY3NGE0MDFiLWE5YzMtNGEwMS1iZjQ0LTU5ZjhkNTljYjRmZSIsImF0dHJpYiI6eyJwZXJzb25HdWlkIjoiZWMyODgzZmQtYWFhYS00N2MyLWE2NWUtZWE3MzM1NjkwYjMyIiwiZGlzcGxheU5hbWUiOiJFbXBvd2VySUQgQWRtaW4iLCJlbWFpbCI6bnVsbH19.R7tjFKZW1jeb_Q9Giex-KRgnvWd9LNfC21BaxCV5Vp0JOYv8zLyk4X9N2bH6rgXbP5FYHeE8w7Mw4za6s_nRlfiPXSwsKTj_rvWxufakCnvx9BmJOzsaCDg7myaCf42zBnNkAuhjnsNLqYIGO9kgkoA4nkciG-C1AHcyHgZbAjVhJKOVMi9jiSdN9mU5Kn4yx9XSWIgbHbqyFDS_-EPQtkvaUrA_U7KxI35pLEK8lC73K7_Wfda6bv7HTRVK1CSshIZeafiit4mpyKueagnzRU969K7ISWQ6wwQdTvPHqL1RsYtY8GEB6tEPh_yNsLfkYj8wyLgXZyQLg_rGL7j7jA"</span> <span class="se">\</span>
   --data <span class="s2">""</span>
 </code></pre>
@@ -1531,7 +1531,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request PATCH <span class="s2">"http://40.83.12.251:80/v1/08028F9F-84E0-43EB-BB43-A5506C3B35C7/Users/7FF0113F-2CE0-4422-8CA1-9E9C271F5000"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request PATCH <span class="s2">"http://40.83.12.251:80/v1/1C31542A-73B6-46A9-A701-816F2599BF46/Users/5BEB4AB8-5F74-4D1C-91B6-3FCCC93D356A"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   --data <span class="s2">"{
@@ -1690,7 +1690,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"http://40.83.12.251:80/v1/08028F9F-84E0-43EB-BB43-A5506C3B35C7/Users"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"http://40.83.12.251:80/v1/1C31542A-73B6-46A9-A701-816F2599BF46/Users"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span> <span class="se">\</span>
   --data <span class="s2">"{
@@ -1790,7 +1790,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s2">"http://40.83.12.251:80/v1/08028F9F-84E0-43EB-BB43-A5506C3B35C7/Users/7FF0113F-2CE0-4422-8CA1-9E9C271F5000"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s2">"http://40.83.12.251:80/v1/1C31542A-73B6-46A9-A701-816F2599BF46/Users/5BEB4AB8-5F74-4D1C-91B6-3FCCC93D356A"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span>
 </code></pre>
 <p>This endpoint deletes the specified user account from the account store.</p>
@@ -1814,7 +1814,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"https://localhost:44326/v1/%7BGuid%20of%20Empowerid%7D/Users/%7BPersonGuid%7D"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"https://localhost:44326/v1/4AFAC894-8C01-4B51-95B8-9834B92B9CB4/Users/3AF825A6-5CF1-4412-A45B-7BB802FD5C9F"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6InQ3X2JIb3RRT3FpOVRZSjl5bWg1RGprMWlIYyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJFbXBvd2VySUQiLCJzdWIiOiJlbXBvd2VyaWRhZG1pbiIsImF1ZCI6ImIzNDBjM2ZlLTU4M2YtNDY3Ni1hNzZjLTYxOWEyNDIxYTQ5NSIsImV4cCI6MTU2NTgxMDY0NywibmJmIjoxNTY1ODA3MDQ3LCJpYXQiOjE1NjU4MDcwNDcsImp0aSI6IjAwM2I3N2RmLWMwZWYtNDY1Ni1hYTE2LTlkOWFmYjJkOGRjYiIsImF0dHJpYiI6eyJwZXJzb25HdWlkIjoiZWMyODgzZmQtYWFhYS00N2MyLWE2NWUtZWE3MzM1NjkwYjMyIiwiZGlzcGxheU5hbWUiOiJFbXBvd2VySUQgQWRtaW4iLCJlbWFpbCI6bnVsbH19.z7vVzod9II_JvCLzLZkP6Z_pdCNNYSwe2cZ8fShQEQShqMTvFSX2dxsMAnF4-GuF-wI4qAPX_Z6t2x_j73IxiKEG7vA_8xsgbg1VeTKZBchkQZq0rYOY71WaK9PWRRWBR-CHWJLZjOhSjWP2HbbdIsZW_wWmFyXgShUiZr1nuIJaAopl00qeKzfalsxfAFdiq0nRtMYIFoZV49qMC-v_1IdgwwZULyfPhDkpGfDVoOnzLnYWJxwe_Qxy4ElFt-DzdXnt-x7gj2I6xz-PEvSfPnVjZPtxQtiwNV06vFmEimDkW1OnOaxUbTkznLRU2L_Roryk0harRezMw9r3AKaf8A"</span> <span class="se">\</span>
   --data <span class="s2">""</span>
 </code></pre>
@@ -1839,7 +1839,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/%7BAGuid%20of%20Empowerid%7D/Users/?filter=Id%20eq%201234"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/4AFAC894-8C01-4B51-95B8-9834B92B9CB4/Users/?filter=Id%20eq%201234"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6IkRhaXN5WHVlIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNzY0NzI4LCJuYmYiOjE1NjE3Mjg3MjgsImlhdCI6MTU2MTcyODcyOCwianRpIjoiMjBkZjg3NTItNTg3Yy00YTllLTk4MDgtYjNlMDAyNGY1NWRkIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJhMGJjZjdhNS0wMDMxLTQzMjAtYjY1MC01ZTY2MTYxN2M0ZWEiLCJkaXNwbGF5TmFtZSI6Ilh1ZSwgRGFpc3kiLCJlbWFpbCI6IjEyM0AxMjMuY29tIn19.Wt9ad0eOsvQyMfjH7wgW3HFR2hh5DWRyNxI1DvfV59slQjVOAywFYfgftupEX3X6AnboCQ9fB8Y7lnjxz4egaV7zCRWt7cIA59eticQ-rEfBFkGwLZeBkMbyc884QCZlac9UJWEBD-rRxoa_iQTsWIM_xLqEOlwKUAatAmzA__4VkpkTEiNShyoAShCo0vPQ9UEpBho7nMyczYxW6U-gqDBSFUT6MRE95XFvvXS9CH4X8MAKaILzeje_DYIdAVhwntzIp7n3L64ZmNqw_9NWpaEs_vZ0oiwVA4FVQHoyBinyHhcUI6wtEXiWJZmxrSSfwCnNjEklSymJPniJuKpJPpIvgcCmvPZYFchwBVFTeaN6nI7y7AnQ_mCE3K1CJlW1TdEMmbQ2k9O_vHmmZIepUxPYhjnOkBE_fbAWt79n9TPfY9GUaWKUamWXoAUGXyzJomxscMuOBaDMM5lbWp9fb-1KA5ds8SgHEMDRQ3xQigIU-M8CEHGBnQ2WNC3WltCUIdvkYZmwxWfRNlMFT0KwcGXA0EAvogTDAIb-Rtn5Do4T8AbMsACwjYdJrEqJQ20g0Oy9AGuSd74zNTJkpsEuK_Bv5V8DWsPQE4bxHeTAK3zDLRyebWYONrZzSVYmLc_u1jecruw4g3rJtbfN6QoU2FLUwm4QFVYSyUgQY3UUUhM"</span> <span class="se">\</span>
   --data <span class="s2">""</span>
 </code></pre>
@@ -1880,7 +1880,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request PATCH <span class="s2">"http://40.83.12.251:80/v1/%7BGuid%20of%20Empowerid%7D/Users/%7BPersonGuid%7D"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request PATCH <span class="s2">"http://40.83.12.251:80/v1/4AFAC894-8C01-4B51-95B8-9834B92B9CB4/Users/3AF825A6-5CF1-4412-A45B-7BB802FD5C9F"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   --data <span class="s2">"{
@@ -2041,7 +2041,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"http://40.83.12.251:80/v1/%7BGuid%20of%20Empowerid%7D/Users"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"http://40.83.12.251:80/v1/4AFAC894-8C01-4B51-95B8-9834B92B9CB4/Users"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6IkRhaXN5WHVlIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNzY0NzI4LCJuYmYiOjE1NjE3Mjg3MjgsImlhdCI6MTU2MTcyODcyOCwianRpIjoiMjBkZjg3NTItNTg3Yy00YTllLTk4MDgtYjNlMDAyNGY1NWRkIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJhMGJjZjdhNS0wMDMxLTQzMjAtYjY1MC01ZTY2MTYxN2M0ZWEiLCJkaXNwbGF5TmFtZSI6Ilh1ZSwgRGFpc3kiLCJlbWFpbCI6IjEyM0AxMjMuY29tIn19.Wt9ad0eOsvQyMfjH7wgW3HFR2hh5DWRyNxI1DvfV59slQjVOAywFYfgftupEX3X6AnboCQ9fB8Y7lnjxz4egaV7zCRWt7cIA59eticQ-rEfBFkGwLZeBkMbyc884QCZlac9UJWEBD-rRxoa_iQTsWIM_xLqEOlwKUAatAmzA__4VkpkTEiNShyoAShCo0vPQ9UEpBho7nMyczYxW6U-gqDBSFUT6MRE95XFvvXS9CH4X8MAKaILzeje_DYIdAVhwntzIp7n3L64ZmNqw_9NWpaEs_vZ0oiwVA4FVQHoyBinyHhcUI6wtEXiWJZmxrSSfwCnNjEklSymJPniJuKpJPpIvgcCmvPZYFchwBVFTeaN6nI7y7AnQ_mCE3K1CJlW1TdEMmbQ2k9O_vHmmZIepUxPYhjnOkBE_fbAWt79n9TPfY9GUaWKUamWXoAUGXyzJomxscMuOBaDMM5lbWp9fb-1KA5ds8SgHEMDRQ3xQigIU-M8CEHGBnQ2WNC3WltCUIdvkYZmwxWfRNlMFT0KwcGXA0EAvogTDAIb-Rtn5Do4T8AbMsACwjYdJrEqJQ20g0Oy9AGuSd74zNTJkpsEuK_Bv5V8DWsPQE4bxHeTAK3zDLRyebWYONrZzSVYmLc_u1jecruw4g3rJtbfN6QoU2FLUwm4QFVYSyUgQY3UUUhM"</span> <span class="se">\</span>
   --data <span class="s2">"{
@@ -2177,7 +2177,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s2">"http://40.83.12.251:80/v1/%7BGuid%20of%20Empowerid%7D/Users/%7BPersonGuid%7D"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s2">"http://40.83.12.251:80/v1/4AFAC894-8C01-4B51-95B8-9834B92B9CB4/Users/3AF825A6-5CF1-4412-A45B-7BB802FD5C9F"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span>
 </code></pre>
 <p>This endpoint deletes the specified person object from the EmpowerID Identity Warehouse.</p>
@@ -2201,7 +2201,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/08028F9F-84E0-43EB-BB43-A5506C3B35C7/Groups/%7BGroupGuid%7D"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/1C31542A-73B6-46A9-A701-816F2599BF46/Groups/206678E0-E286-4F0C-A9DB-191E7331E3E0"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span>
 </code></pre>
 <p>This endpoint retrieves group information for a given user group.</p>
@@ -2223,7 +2223,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/08028F9F-84E0-43EB-BB43-A5506C3B35C7/Groups/?filter=Id%20eq%201234"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/1C31542A-73B6-46A9-A701-816F2599BF46/Groups/?filter=Id%20eq%201234"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span>
 </code></pre>
 <p>This endpoint retrieves group information for a given user group, based on the specified filters.</p>
@@ -2261,7 +2261,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request PATCH <span class="s2">"http://40.83.12.251:80/v1/08028F9F-84E0-43EB-BB43-A5506C3B35C7/Groups/%7BGroupGuid%7D"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request PATCH <span class="s2">"http://40.83.12.251:80/v1/1C31542A-73B6-46A9-A701-816F2599BF46/Groups/206678E0-E286-4F0C-A9DB-191E7331E3E0"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span> <span class="se">\</span>
   --data <span class="s2">"{
@@ -2327,7 +2327,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"http://40.83.12.251:80/v1/08028F9F-84E0-43EB-BB43-A5506C3B35C7/Groups"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"http://40.83.12.251:80/v1/1C31542A-73B6-46A9-A701-816F2599BF46/Groups"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span> <span class="se">\</span>
   --data <span class="s2">"{
@@ -2375,8 +2375,8 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s2">"http://40.83.12.251:80/v1/08028F9F-84E0-43EB-BB43-A5506C3B35C7/Groups/%7BGroupGuid%7D"</span> <span class="se">\</span>
-  --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s2">"http://40.83.12.251:80/v1/1C31542A-73B6-46A9-A701-816F2599BF46/Groups/206678E0-E286-4F0C-A9DB-191E7331E3E0"</span> <span class="se">\</span>
+  --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5N206678E0-E286-4F0C-A9DB-191E7331E3E0zQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span>
 </code></pre>
 <p>This endpoint deletes the specified user group from the account store.</p>
 <h4 id='http-request-25'>HTTP Request</h4>
@@ -2397,7 +2397,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/%7BAccountStoreGuid,%20guid%20of%20empowerid%7D/Groups/%7BManagementRoleGuid%7D"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/4AFAC894-8C01-4B51-95B8-9834B92B9CB4/Groups/624B1EC6-66F5-4724-848D-1055863B111B"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span>
 </code></pre>
 <p>This endpoint retrieves Management Role information from the EmpowerID Identity Warehouse.</p>
@@ -2421,26 +2421,26 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request PATCH <span class="s2">"http://40.83.12.251:80/v1/%7BAccountStoreGuid,%20guid%20of%20empowerid%7D/Groups/%7BManagementRoleGuid%7D"</span> <span class="se">\</span>
-  --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span> <span class="se">\</span>
-  --data <span class="s2">"{
-    </span><span class="se">\"</span><span class="s2">schemas</span><span class="se">\"</span><span class="s2">: [
-        </span><span class="se">\"</span><span class="s2">urn:ietf:params:scim:api:messages:2.0:PatchOp</span><span class="se">\"</span><span class="s2">
+<pre class="highlight plaintext"><code>curl --location --request PATCH "http://40.83.12.251:80/v1/4AFAC894-8C01-4B51-95B8-9834B92B9CB4/Groups/624B1EC6-66F5-4724-848D-1055863B111B" \
+  --header "Content-Type: application/json" \
+  --header "Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI" \
+  --data "{
+    \"schemas\": [
+        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"
     ],
-    </span><span class="se">\"</span><span class="s2">Operations</span><span class="se">\"</span><span class="s2">: [
+    \"Operations\": [
         {
-            </span><span class="se">\"</span><span class="s2">op</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">add or remove</span><span class="se">\"</span><span class="s2">,
-            </span><span class="se">\"</span><span class="s2">path</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">members</span><span class="se">\"</span><span class="s2">,
-            </span><span class="se">\"</span><span class="s2">value</span><span class="se">\"</span><span class="s2">: [
+            \"op\": \"add or remove\",
+            \"path\": \"members\",
+            \"value\": [
                 {
-                    </span><span class="se">\"</span><span class="s2">type</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">person</span><span class="se">\"</span><span class="s2">,
-                    </span><span class="se">\"</span><span class="s2">Value</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">personGuid</span><span class="se">\"</span><span class="s2">
+                    \"type\": \"person\",
+                    \"Value\": \"personGuid\"
                 }
             ]
         }
     ]
-}"</span>
+}"
 </code></pre>
 <p>This endpoint updates Management Role information for a specific role in the EmpowerID Identity Warehouse.</p>
 <h4 id='http-request-27'>HTTP Request</h4>
@@ -2489,7 +2489,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"http://40.83.12.251:80/v1/%7BGuid%20of%20Empowerid%7D/Groups"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s2">"http://40.83.12.251:80/v1/4AFAC894-8C01-4B51-95B8-9834B92B9CB4/Groups"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span> <span class="se">\</span>
   --data <span class="s2">"{
@@ -2543,7 +2543,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s2">"http://40.83.12.251:80/v1/%7BGuid%20of%20Empowerid%7D/Groups/%7BManagementRoleGuid%7D"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s2">"http://40.83.12.251:80/v1/4AFAC894-8C01-4B51-95B8-9834B92B9CB4/Groups/624B1EC6-66F5-4724-848D-1055863B111B"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span>
 </code></pre>
 <p>This endpoint deletes the specified Management Role from the EmpowerID Identity Warehouse.</p>
@@ -2567,7 +2567,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/%7BAccountStoreGuid%7D/Groups/%7BOrgRoleOrgZoneGuid%7D"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s2">"http://40.83.12.251:80/v1/4AFAC894-8C01-4B51-95B8-9834B92B9CB4/Groups/17BCAB8D-E5B0-91AC-2640-C806533F5605"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span>
 </code></pre>
 <p>This endpoint retrieves Business Role and Location information from the EmpowerID Identity Warehouse.</p>
@@ -2591,7 +2591,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl --location --request PATCH <span class="s2">"http://40.83.12.251:80/v1/%7BGuid%20of%20Empowerid%7D/Groups/%7BOrgRoleOrgZoneGuid%7D"</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl --location --request PATCH <span class="s2">"http://40.83.12.251:80/v1/4AFAC894-8C01-4B51-95B8-9834B92B9CB4/Groups/17BCAB8D-E5B0-91AC-2640-C806533F5605"</span> <span class="se">\</span>
   --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Im1yVGE3cG1DQUR3ZWZSX2NQMGpUbzkyVjd2YyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Nzby5lbXBvd2VyaWFtLmNvbSIsInN1YiI6ImVtcG93ZXJpZGFkbWluIiwiYXVkIjoiNmMzZTc0YjYtN2RmYi00NDFmLWFjMmUtNTE5Y2ViMzUzYTcwIiwiZXhwIjoxNTYxNjEyOTc0LCJuYmYiOjE1NjE1NzY5NzQsImlhdCI6MTU2MTU3Njk3NCwianRpIjoiZWI1YTM4OWUtMzE3Ni00MTg5LTlmODUtZDc2MzRhYzRhYTRjIiwiYXR0cmliIjp7InBlcnNvbkd1aWQiOiJlYzI4ODNmZC1hYWFhLTQ3YzItYTY1ZS1lYTczMzU2OTBiMzIiLCJkaXNwbGF5TmFtZSI6IkVtcG93ZXJJRCBBZG1pbiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20ifX0.oThy9mrL50mmROIixA2lkNi_2pyohxVXBD_CgcqdbvCEfdeiYqTemu8wKCIcB_9XM2J-Q6_W6PLdefsYU8gYWWXyDVAcoa5WCzryjt5Iimc5XOEIsLJcPBsV6pyglOmlnoz-wDLRy3r4Qs0vgi8vj9qlWMXhpEHYYuzYGD_7wH3ordloEH9tMHASPc0Pa9r-WLA3Kc9go_N5gFQ_8HAsjcAQkpi1BgGYJet27gGw4f2MxrB1Wiob4mM6Fo6KKYKfWfVWLgDX3wYcPLTLJgrfwZgPjhgYxwxUWuSYom5tV5M_p1nJsyeOoYn6QGU-F2BATzll3HuSkiXefkj-AmWZQizX6ITUFWzkBVYzy88rDVNxQx0VTAk62sEiqNjKgSvns7Pwji7qzgXPEMieJ-qYa3JicfbdVVTlITCrgOLyIQYNzDeYk8OzCDJBmw11GkIO2wyf3jwRcD6lq3ujbGfHE5kwmxlO3D0dk1RNu0OZhr9XX6OE8kYj5_IDn-H8eEGi_L5LaBvEcFliDrk-FETtg8o-PHFp_ygNA2XpG36W1C9_R_xHJ3QQp5Zr09-_-8448yZOlBL_6OArhtffIr-MuPZqocH5uxxT-Kkc3C2e1n4gOAyGzt1jOADV3MVRdLBuGEa95lg0N7QrAMkVmFPL7VMxD6exCQxEqZx-sGMe4UI"</span> <span class="se">\</span>
   --data <span class="s2">"{
@@ -2614,7 +2614,7 @@
 </code></pre>
 <p>This endpoint updates Business Role and Location information in the EmpowerID Identity Warehouse.</p>
 <h4 id='http-request-31'>HTTP Request</h4>
-<p><code>PATCH http://40.83.12.251:80/v1/{AccountStoreGui}/Groups/{OrgRoleOrgZoneGuid}</code></p>
+<p><code>PATCH http://40.83.12.251:80/v1/{AccountStoreGuid}/Groups/{OrgRoleOrgZoneGuid}</code></p>
 
 <aside class="notice">Replace <em>AccountStoreGuid</em> with the EmpowerID GUID.</aside>
 <h4 id='headers-29'>Headers</h4>
