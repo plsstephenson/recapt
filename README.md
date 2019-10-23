@@ -17,8 +17,8 @@ Recapt provides:
 
 ## Portfolio
 
-You can browse some samples of the documentation I have recently been working on [here](../Portfolio.htnml)
+You can browse some samples of the documentation I have recently been working on [here](../Portfolio.html).
 
 ### Contact
 
-To discuss details of your project, please feel free to contact me at [info@recapt.io](info@recapt.io)
+To discuss details of your project, please feel free to contact me at [info@recapt.io](info@recapt.io).
