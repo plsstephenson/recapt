@@ -12,11 +12,12 @@ Recapt provides:
 ## Customers
 
 - Universal Postal Union
-- Rubric
+- Rubric 
 - Hydrogen Consulting
 
 ## Portfolio
 
+For some samples of the documentation I have recently been working on, click [here](../Portfolio.md).
 ### API Documentation
 
 [IDPlatform API](../IDPlatform/index.html)  
