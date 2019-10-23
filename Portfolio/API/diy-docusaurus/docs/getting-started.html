@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Getting started · DoItYourself</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Welcome to DIY! DIY is a cloud-based platform for assembling custom API flows simply, enabling data connectivity for your internal and external business needs."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Getting started · DoItYourself"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.recapt.io/diy-docusaurus/"/><meta property="og:description" content="Welcome to DIY! DIY is a cloud-based platform for assembling custom API flows simply, enabling data connectivity for your internal and external business needs."/><meta property="og:image" content="https://www.recapt.io/diy-docusaurus/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.recapt.io/diy-docusaurus/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/diy-docusaurus/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/diy-docusaurus/js/scrollSpy.js"></script><link rel="stylesheet" href="/diy-docusaurus/css/main.css"/><script src="/diy-docusaurus/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/diy-docusaurus/"><img class="logo" src="/diy-docusaurus/img/favicon.ico" alt="DoItYourself"/><h2 class="headerTitleWithLogo">DoItYourself</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/diy-docusaurus/docs/getting-started" target="_self">Docs</a></li><li class=""><a href="https://sandbox-2.doityourself.io/manager" target="_self">Try it out</a></li><li class="siteNavGroupActive"><a href="/diy-docusaurus/docs/videos" target="_self">Videos</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting started</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/diy-docusaurus/docs/getting-started">Getting started with DIY</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/diy-docusaurus/docs/developers">DIY for developers</a></li><li class="navListItem"><a class="navItem" href="/diy-docusaurus/docs/administrators">DIY for administrators</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Examples<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/diy-docusaurus/docs/videos">Video examples</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Getting started</h1></header><article><div><span><p>Welcome to DIY! DIY is a cloud-based platform for assembling custom API flows simply, enabling data connectivity for your internal and external business needs.</p>
+<h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p>Using DIY, you can connect data sources -- such as web APIs and databases -- and expose data models, through secure, RESTful APIs. You can create a seamless flow from one API to the next, passing data along as you go. You can also manipulate the data before it reaches its destination <a href="/diy-docusaurus/docs/developers/#make-real-time-changes-to-your-api-data-flow"><strong>using a graphical drag and drop interface</strong></a>. Once you have configured your flow, it appears to your customers as a single API, which they can access using state-of-the-art API documentation.</p>
+<p>You can expose the data models hosted on your own database servers, or create new data models in DIY to be hosted in the DIY cloud.</p>
+<h2><a class="anchor" aria-hidden="true" id="what-you-need"></a><a href="#what-you-need" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What you need</h2>
+<p>DIY uses a web interface and cloud hosting, so there is nothing for you to install. All you need to get started is a user account. See <a href="/diy-docusaurus/docs/administrators"><strong>DIY for administrators</strong></a> for more details.</p>
+<h2><a class="anchor" aria-hidden="true" id="how-it-works"></a><a href="#how-it-works" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How it works</h2>
+<p>To assemble an API, you need to configure each connector in your flow, as follows:</p>
+<ol>
+<li>Create the data source (API, database or storage connector).</li>
+<li>Specify details of the data model(s) associated with your data source.</li>
+<li>Enable user access to the data model(s).</li>
+</ol>
+<blockquote>Check out our <a href="videos.html">video tutorials</a> for a detailed demonstration of how to configure each connector type.</blockquote>
+<p>DIY comes with out-of-the-box functionality providing everything you need to assemble simple APIs. If you want to make your API more complex, however, DIY also provides the tools you need to extend it -- see <a href="/diy-docusaurus/docs/developers"><strong>DIY for developers</strong></a> for an overview of how to add some extra configuration to your API.</p>
+<h3><a class="anchor" aria-hidden="true" id="create-the-data-source"></a><a href="#create-the-data-source" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create the data source</h3>
+<p>Repeat these steps for each of the data source connectors in your API.</p>
+<ol>
+<li>In the <strong>API</strong> menu, select <strong>Datasources</strong>, then click <img src="/diy-docusaurus/docs/assets/plus-icon.png" alt="alt-text">.</li>
+</ol>
+<p><img src="/diy-docusaurus/docs/assets/datasource.png" alt="alt-text"></p>
+<ol start="2">
+<li>Select the data source connector type from the drop-down list and click <strong>Next</strong>.</li>
+</ol>
+<p><img src="/diy-docusaurus/docs/assets/datasource2.png" alt="alt-text"></p>
+<ol start="3">
+<li>Enter the data source name (which must be unique and contain no spaces), then complete the other details of the data source configuration either in the <strong>Form</strong> tab or the <strong>Editor</strong> tab. The fields available depend on the type of data source specified.</li>
+</ol>
+<table>
+<thead>
+<tr><th>Connector type</th><th>Details to specify</th></tr>
+</thead>
+<tbody>
+<tr><td>Database (mySQL, Oracle, etc.)</td><td>Host server/port, user credentials and database name</td></tr>
+<tr><td>REST webservice</td><td>List all the endpoints you need, including URL, method, parameters, etc.</td></tr>
+<tr><td>SOAP webservice</td><td>URL and WSDL</td></tr>
+<tr><td>Storage connector</td><td>Storage provider details, including host server/port, user credentials and root folder</td></tr>
+</tbody>
+</table>
+<p><img src="/diy-docusaurus/docs/assets/datasource3.png" alt="alt-text"></p>
+<ol start="4">
+<li>Click <strong>Done</strong>. DIY tests the data source connection and any errors are reported.</li>
+</ol>
+<p><img src="/diy-docusaurus/docs/assets/datasource4.png" alt="alt-text"></p>
+<h3><a class="anchor" aria-hidden="true" id="declare-the-data-model"></a><a href="#declare-the-data-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Declare the data model</h3>
+<p>When you create a new <em>database</em> type data source, you need to specify details of the data model to be associated with it for this API connector. You do this by using the <strong>Discover</strong> feature to find any associated schemas, then updating the chosen schema as required. Note that as MongoDB databases do not have a database schema, you need to create a new model for them configured in a specific way. See the steps below for more details.</p>
+<p>DIY automatically creates a data model for <em>web service</em> type data sources. You can use the <strong>Edit</strong> feature to view and edit data models associated with web service data sources.</p>
+<ol>
+<li>In the <strong>API</strong> menu, select <strong>Models</strong>.</li>
+</ol>
+<p><img src="/diy-docusaurus/docs/assets/datamodel.png" alt="alt-text"></p>
+<ol start="2">
+<li>If you are:</li>
+</ol>
+<ul>
+<li>connecting a remote data model (database data sources, apart from MongoDB), click <strong>Discover</strong> <img src="/diy-docusaurus/docs/assets/discover-icon.png" alt="alt-text">, then proceed to step 3</li>
+<li>editing an existing data model (REST or SOAP data sources, or other general data model updates), click <strong>Edit</strong> <img src="/diy-docusaurus/docs/assets/edit-icon.png" alt="alt-text"> next to the data model in the list, then proceed to step 4</li>
+<li>creating a new data model (MongoDB data sources), click <strong>New</strong> <img src="/diy-docusaurus/docs/assets/plus-icon.png" alt="alt-text">, then proceed to step 4</li>
+</ul>
+<ol start="3">
+<li>If you clicked <img src="/diy-docusaurus/docs/assets/discover-icon.png" alt="alt-text">, select the data source and the model from the list (which is automatically populated by DIY with the available schemas based on the selected data source). Click <strong>Next</strong>.</li>
+</ol>
+<p><img src="/diy-docusaurus/docs/assets/datamodel2.png" alt="alt-text"></p>
+<p>DIY displays the list of columns in the schema. Uncheck any columns you do not require and click <strong>Done</strong>.</p>
+<p><img src="/diy-docusaurus/docs/assets/datamodel3.png" alt="alt-text"></p>
+<ol start="4">
+<li>Update the details of the model in the <strong>Form</strong> or the <strong>Editor</strong> tab, if required.</li>
+</ol>
+<p><img src="/diy-docusaurus/docs/assets/datamodel4.png" alt="alt-text">  <br>
+For MongoDB databases, you need to click the <strong>Editor</strong> tab and add the values shown in the following example. You can add the new fields in the <strong>options</strong> section using the editor's <strong>Append</strong> feature. Note that the database name must match the name you specified for your MongoDB data source and the collection must be a collection that exists in the MongoDB database.</p>
+<p><img src="/diy-docusaurus/docs/assets/datamodel5.png" alt="alt-text"></p>
+<ol start="5">
+<li>Enable user access to your new model in the <strong>Default access control rules</strong> section, by selecting the type of user from the list and toggling the permission button to <strong>Allow</strong>. You can also click <strong>Add access control rules</strong> if you want to add more rules. Note that if you require more specific access control rules, you can create them using the <a href="/diy-docusaurus/docs/administrators/#access-control-rules"><strong>Access control rules</strong></a> function.</li>
+</ol>
+<p><img src="/diy-docusaurus/docs/assets/datamodel6.png" alt="alt-text"></p>
+<ol start="6">
+<li>Click <strong>Save</strong>. On the main <strong>Models</strong> page you can now click next to your new model in the list to expand it and view the endpoints which have been created for it. You can also expand each endpoint by clicking on it, and test the endpoint by clicking <strong>Try it out</strong>.
+<img src="/diy-docusaurus/docs/assets/datamodel8.png" alt="alt-text"></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="share-the-api"></a><a href="#share-the-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share the API</h3>
+<ol>
+<li>To share your API with customers and other end users, create a new user account with the appropriate <a href="/diy-docusaurus/docs/administrators/#user-permissions"><strong>user permissions</strong></a>.</li>
+<li>Once you have granted the appropriate permissions, you can share your DIY URL with your customers. Customers with <strong>API explorer</strong> permissions will be able to view and try out your API endpoints directly in the DIY API explorer.</li>
+</ol>
+<p><img src="/diy-docusaurus/docs/assets/apiexplorer.png" alt="alt-text"></p>
+<p>Your customers can also access your API by means of a third-party application. See <a href="/diy-docusaurus/docs/administrators/#third-party-client-application-administration"><strong>Third-party client application administration</strong></a> for more information.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/diy-docusaurus/docs/developers"><span>DIY for developers</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#what-you-need">What you need</a></li><li><a href="#how-it-works">How it works</a><ul class="toc-headings"><li><a href="#create-the-data-source">Create the data source</a></li><li><a href="#declare-the-data-model">Declare the data model</a></li><li><a href="#share-the-api">Share the API</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/diy-docusaurus/" class="nav-home"><img src="/diy-docusaurus/img/favicon.ico" alt="DoItYourself" width="66" height="58"/></a><div><h5>Docs</h5><a href="/diy-docusaurus/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/diy-docusaurus/docs/en/doc2.html">Guides (or other categories)</a><a href="/diy-docusaurus/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/diy-docusaurus/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/diy-docusaurus/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 DoItYourself</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

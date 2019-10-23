@@ -1,1 +1,0 @@
-define({numchunks:1,prefix:'Index_Chunk',terms:[{t:'getting started',c:0,$:1},{t:'online help',c:0,$:0},{t:'projects',c:0,$:0},{t:'vertical menu',c:0,$:0}]});

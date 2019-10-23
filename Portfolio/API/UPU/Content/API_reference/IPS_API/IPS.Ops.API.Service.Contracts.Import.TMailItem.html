@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Side_Navigation_Skin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="IPS API|IPS.Ops.API.Service.Contracts.Import">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="title" content="Class TMailItem" />
+        <meta property="docfx:navrel" content="../toc.html" />
+        <meta property="docfx:tocrel" content="toc.html" /><title>Class TMailItem
+   </title>
+        <meta http-equiv="Cache-control" content="no-cache" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Home.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container" data-mc-content-body="True">
+                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                            <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                        </button>
+                                        <button class="button needs-pie next-topic-button" title="Navigate next">
+                                            <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                        </button>
+                                        <div class="button-separator">
+                                        </div>
+                                        <button class="button needs-pie print-button" title="Print">
+                                            <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                        </button>
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="expand all" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="nocontent">
+                                    <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                    </div>
+                                </div>
+                                <div id="wrapper">
+                                    <div role="main" class="container body-content hide-when-search">
+                                        <div class="article row grid-right">
+                                            <div class="col-md-10">
+                                                <article class="content wrap" id="_content" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem">
+                                                    <h1 id="IPS_Ops_API_Service_Contracts_Import_TMailItem" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem" class="text-break">Class TMailItem
+  </h1>
+                                                    <div class="markdown level0 summary">
+                                                    </div>
+                                                    <div class="markdown level0 conceptual">
+                                                    </div>
+                                                    <div class="inheritance">
+                                                        <h5>Inheritance</h5>
+                                                        <div class="level0"><span class="xref">System.Object</span>
+                                                        </div>
+                                                        <div class="level1"><span class="xref">TMailItem</span>
+                                                        </div>
+                                                        <div class="level2"><a class="xref" href="IPS.Ops.API.Service.Contracts.Import.TEMS.html">TEMS</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="inheritedMembers">
+                                                        <h5>Inherited Members</h5>
+                                                        <div><span class="xref">System.Object.ToString()</span>
+                                                        </div>
+                                                        <div><span class="xref">System.Object.Equals(System.Object)</span>
+                                                        </div>
+                                                        <div><span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                                                        </div>
+                                                        <div><span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                                                        </div>
+                                                        <div><span class="xref">System.Object.GetHashCode()</span>
+                                                        </div>
+                                                        <div><span class="xref">System.Object.GetType()</span>
+                                                        </div>
+                                                        <div><span class="xref">System.Object.MemberwiseClone()</span>
+                                                        </div>
+                                                    </div>
+                                                    <h6><strong>Namespace</strong>: <a class="xref" href="IPS.Ops.API.Service.Contracts.Import.html">IPS.Ops.API.Service.Contracts.Import</a></h6>
+                                                    <h6><strong>Assembly</strong>: IPS.Ops.API.Service.dll</h6>
+                                                    <h5 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_syntax">Syntax</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataContract]
+public class TMailItem</code></pre>
+                                                    </div>
+                                                    <h3 id="constructors">Constructors
+  </h3><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem__ctor_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.#ctor*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem__ctor" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.#ctor">TMailItem()</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">public TMailItem()</code></pre>
+                                                    </div>
+                                                    <h3 id="properties">Properties
+  </h3><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_AdditionalFeesCurrencyCd_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.AdditionalFeesCurrencyCd*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_AdditionalFeesCurrencyCd" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.AdditionalFeesCurrencyCd">AdditionalFeesCurrencyCd</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string AdditionalFeesCurrencyCd { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_AdditionalFeesValue_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.AdditionalFeesValue*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_AdditionalFeesValue" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.AdditionalFeesValue">AdditionalFeesValue</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public decimal? AdditionalFeesValue { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Decimal</span>&gt;</td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Addressee_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Addressee*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Addressee" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Addressee">Addressee</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public TPeople Addressee { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><a class="xref" href="IPS.Ops.API.Service.Contracts.Import.TPeople.html">TPeople</a>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_ClassCd_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.ClassCd*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_ClassCd" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.ClassCd">ClassCd</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string ClassCd { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Content_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Content*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Content" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Content">Content</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string Content { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_CurrencyCd_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.CurrencyCd*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_CurrencyCd" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.CurrencyCd">CurrencyCd</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string CurrencyCd { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_CustomNo_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.CustomNo*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_CustomNo" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.CustomNo">CustomNo</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string CustomNo { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_CustomsTaxInformation_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.CustomsTaxInformation*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_CustomsTaxInformation" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.CustomsTaxInformation">CustomsTaxInformation</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public TCustomsTaxInformation CustomsTaxInformation { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><a class="xref" href="IPS.Ops.API.Service.Contracts.Import.TCustomsTaxInformation.html">TCustomsTaxInformation</a>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_DestCountryCd_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.DestCountryCd*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_DestCountryCd" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.DestCountryCd">DestCountryCd</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string DestCountryCd { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_DutiableInd_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.DutiableInd*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_DutiableInd" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.DutiableInd">DutiableInd</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string DutiableInd { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_DutiableValue_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.DutiableValue*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_DutiableValue" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.DutiableValue">DutiableValue</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public decimal? DutiableValue { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Decimal</span>&gt;</td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_IdentifierType_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.IdentifierType*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_IdentifierType" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.IdentifierType">IdentifierType</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string IdentifierType { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_InnrbagId_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.InnrbagId*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_InnrbagId" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.InnrbagId">InnrbagId</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string InnrbagId { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_ItemEvents_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.ItemEvents*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_ItemEvents" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.ItemEvents">ItemEvents</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember(IsRequired = true)]
+public List&lt;TItemEvent&gt; ItemEvents { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="IPS.Ops.API.Service.Contracts.Import.TItemEvent.html">TItemEvent</a>&gt;</td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_ItemId_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.ItemId*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_ItemId" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.ItemId">ItemId</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string ItemId { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_ItemWeight_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.ItemWeight*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_ItemWeight" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.ItemWeight">ItemWeight</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public decimal? ItemWeight { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Decimal</span>&gt;</td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Letter_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Letter*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Letter" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Letter">Letter</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public TLetter Letter { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><a class="xref" href="IPS.Ops.API.Service.Contracts.Import.TLetter.html">TLetter</a>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_LocalId_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.LocalId*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_LocalId" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.LocalId">LocalId</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string LocalId { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Misc1_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Misc1*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Misc1" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Misc1">Misc1</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string Misc1 { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Misc2_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Misc2*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Misc2" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Misc2">Misc2</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string Misc2 { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Misc3_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Misc3*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Misc3" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Misc3">Misc3</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string Misc3 { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Misc4_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Misc4*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Misc4" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Misc4">Misc4</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string Misc4 { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_MrsExpirationDate_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.MrsExpirationDate*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_MrsExpirationDate" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.MrsExpirationDate">MrsExpirationDate</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public DateTime? MrsExpirationDate { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_MrsOriginalId_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.MrsOriginalId*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_MrsOriginalId" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.MrsOriginalId">MrsOriginalId</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string MrsOriginalId { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_MrsStatus_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.MrsStatus*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_MrsStatus" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.MrsStatus">MrsStatus</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string MrsStatus { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_NetworkEntryLocationTypeCd_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.NetworkEntryLocationTypeCd*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_NetworkEntryLocationTypeCd" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.NetworkEntryLocationTypeCd">NetworkEntryLocationTypeCd</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string NetworkEntryLocationTypeCd { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_OperatorCd_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.OperatorCd*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_OperatorCd" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.OperatorCd">OperatorCd</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string OperatorCd { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_OrigCountryCd_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.OrigCountryCd*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_OrigCountryCd" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.OrigCountryCd">OrigCountryCd</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string OrigCountryCd { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Parcel_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Parcel*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Parcel" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Parcel">Parcel</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public TParcel Parcel { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><a class="xref" href="IPS.Ops.API.Service.Contracts.Import.TParcel.html">TParcel</a>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_PostagePaidCurrencyCd_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.PostagePaidCurrencyCd*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_PostagePaidCurrencyCd" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.PostagePaidCurrencyCd">PostagePaidCurrencyCd</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string PostagePaidCurrencyCd { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_PostagePaidValue_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.PostagePaidValue*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_PostagePaidValue" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.PostagePaidValue">PostagePaidValue</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public decimal? PostagePaidValue { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Decimal</span>&gt;</td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_PostalStatusFcd_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.PostalStatusFcd*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_PostalStatusFcd" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.PostalStatusFcd">PostalStatusFcd</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string PostalStatusFcd { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_ProductTypeCd_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.ProductTypeCd*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_ProductTypeCd" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.ProductTypeCd">ProductTypeCd</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string ProductTypeCd { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_RecptclId_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.RecptclId*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_RecptclId" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.RecptclId">RecptclId</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public string RecptclId { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.String</span>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Sender_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Sender*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Sender" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Sender">Sender</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public TPeople Sender { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><a class="xref" href="IPS.Ops.API.Service.Contracts.Import.TPeople.html">TPeople</a>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Services_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Services*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Services" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Services">Services</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public List&lt;TService&gt; Services { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="IPS.Ops.API.Service.Contracts.Import.TService.html">TService</a>&gt;</td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Value_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Value*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_Value" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.Value">Value</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">[DataMember]
+public decimal? Value { get; set; }</code></pre>
+                                                    </div>
+                                                    <h5 class="propertyValue">Property Value</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Decimal</span>&gt;</td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <h3 id="methods">Methods
+  </h3><a id="IPS_Ops_API_Service_Contracts_Import_TMailItem_GetServiceCodesList_" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.GetServiceCodesList*"></a>
+                                                    <h4 id="IPS_Ops_API_Service_Contracts_Import_TMailItem_GetServiceCodesList" data-uid="IPS.Ops.API.Service.Contracts.Import.TMailItem.GetServiceCodesList">GetServiceCodesList()</h4>
+                                                    <div class="markdown level1 summary">
+                                                    </div>
+                                                    <div class="markdown level1 conceptual">
+                                                    </div>
+                                                    <h5 class="decalaration">Declaration</h5>
+                                                    <div class="codewrapper"><pre xml:space="preserve"><code class="lang-csharp hljs">public List&lt;string&gt; GetServiceCodesList()</code></pre>
+                                                    </div>
+                                                    <h5 class="returns">Returns</h5>
+                                                    <table class="TableStyle-Basic" style="mc-table-style: url('../../Resources/TableStyles/Basic.css');" cellspacing="3">
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Type</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1"><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" />
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </article>
+                                            </div>
+                                            <div class="hidden-sm col-md-2" role="complementary">
+                                                <div class="sideaffix">
+                                                    <div class="contribution">
+                                                        <ul class="nav">
+                                                        </ul>
+                                                    </div>
+                                                    <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript" src="../../API reference/styles/docfx.vendor.js">
+                                </script>
+                                <script type="text/javascript" src="../../API reference/styles/docfx.js">
+                                </script>
+                                <script type="text/javascript" src="../../API reference/styles/main.js">
+                                </script>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>
