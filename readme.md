@@ -1,7 +1,3 @@
----
-layout: default
----
-
 ## Welcome to Recapt
 Quality supplier of technical documentation and localization services.
 
