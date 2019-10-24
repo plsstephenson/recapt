@@ -14,17 +14,17 @@ Recapt provides:
 - Hydrogen Consulting
 
 ## Portfolio
-For some samples of the documentation I have recently been working on, click here.
+For some samples of the documentation I have recently been working on, click [here](/Portfolio/portfolio.md)
 
 ### API Documentation
-IDPlatform API
-UPU API Portal
+- IDPlatform API
+- UPU API Portal
 
 ### User Guides
-- [CDS Customs User Guide](../PDFs/CDS Customs User Guide.pdf)
-- [IPS Import Export Guide](../PDFs/IPS Import Export Guide.pdf)
-- [IPS Installation Guide](../PDFs/IPS Installation Guide.pdf)
-- [UPU Workspace User Guide](../PDFs/UPU Workspace User Guide.pdf)
+- [CDS Customs User Guide](/Portfolio/PDFs/CDS Customs User Guide.pdf)
+- [IPS Import Export Guide](Portfolio/PDFs/IPS Import Export Guide.pdf)
+- [IPS Installation Guide](/Portfolio/PDFs/IPS Installation Guide.pdf)
+- [UPU Workspace User Guide](/Portfolio/PDFs/UPU Workspace User Guide.pdf)
 
 ### Online Help
 - CDS Online Help
