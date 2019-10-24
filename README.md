@@ -14,7 +14,7 @@ Recapt provides:
 - Hydrogen Consulting
 
 ## Portfolio
-For some samples of the documentation I have recently been working on, click [here](/Portfolio/portfolio.md)
+For some samples of the documentation I have recently been working on, click [here](/Portfolio/portfolio.html)
 
 ### API Documentation
 - IDPlatform API
