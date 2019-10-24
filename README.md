@@ -14,21 +14,7 @@ Recapt provides:
 - Hydrogen Consulting
 
 ## Portfolio
-For some samples of the documentation I have recently been working on, click [here](/Portfolio/portfolio.html)
-
-### API Documentation
-- IDPlatform API
-- UPU API Portal
-
-### User Guides
-- [CDS Customs User Guide](/Portfolio/PDFs/CDS Customs User Guide.pdf)
-- [IPS Import Export Guide](Portfolio/PDFs/IPS Import Export Guide.pdf)
-- [IPS Installation Guide](/Portfolio/PDFs/IPS Installation Guide.pdf)
-- [UPU Workspace User Guide](/Portfolio/PDFs/UPU Workspace User Guide.pdf)
-
-### Online Help
-- CDS Online Help
-- QSF Online Help
+For some recent samples of the documentation I have been working on, click [here](/Portfolio/portfolio.html).
 
 ## Contact
 info@recapt.io
