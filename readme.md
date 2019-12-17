@@ -8,11 +8,6 @@ Recapt provides:
 - API documentation
 - Software localization support
 
-## Customers
-- Universal Postal Union
-- Rubric
-- Hydrogen Consulting
-
 ## Portfolio
 For some recent samples of the documentation I have been working on, click [here](/Portfolio/portfolio.html).
 
