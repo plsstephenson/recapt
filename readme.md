@@ -9,7 +9,7 @@ Recapt provides:
 - Software localization support
 
 ## Portfolio
-For some recent samples of the documentation I have been working on, click [here](/Portfolio/portfolio.html).
+For some recent samples of documentation I have been working on, click [here](/Portfolio/portfolio.html).
 
 ## Contact
 info@recapt.io
