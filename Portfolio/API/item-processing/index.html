@@ -1,0 +1,999 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>XXX API documentation</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authorization" class="toc-h1 toc-link" data-title="Authorization">Authorization</a>
+          </li>
+          <li>
+            <a href="#response-codes" class="toc-h1 toc-link" data-title="Response codes">Response codes</a>
+          </li>
+          <li>
+            <a href="#api-methods" class="toc-h1 toc-link" data-title="API methods">API methods</a>
+              <ul class="toc-list-h2">
+                <li>
+                    <a href="#function-1" class="toc-h2 toc-link" data-title="Function 1">XXX import</a>
+                </li>
+                <li>
+                    <a href="#function-2" class="toc-h2 toc-link" data-title="Function 2">XXX list</a>
+                </li>
+                <li>
+                    <a href="#function-3" class="toc-h2 toc-link" data-title="Function 3">XXX export</a>
+                </li>
+                <li>
+                    <a href="#function-4" class="toc-h2 toc-link" data-title="Function 4">XXX trace</a>
+                </li>
+              </ul>
+          </li>
+      </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>The XXX API exposes xxx functions.  </p>
+
+<p>This API reference explains each of the API endpoints, with example requests and responses in the right-hand column of the page.</p>
+<h1 id='authorization'>Authorization</h1>
+<p>To use the XXX API, you need to include a token with each HTTP call (a GUID that is associated with one or more API operations).</p>
+<h1 id='response-codes'>Response codes</h1>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request -- data in the request body is invalid</td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- authorization failed</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- an exception error occurred</td>
+</tr>
+</tbody></table>
+
+<p>If an error or a code other than HTTP 200 is returned, see the response body for details (the format of an error response body is shown in the column on the right).</p>
+
+<blockquote><p>Response body format</p></blockquote>
+
+<pre class="highlight shell tab-shell"><code><span class="s2">
+    {
+      Errors: [
+        "Error message 1", "Error message 2"...
+      ]
+    }
+</span>
+</code>
+</pre>
+<h1 id='api-methods'>XXX API methods</h1><h2 id="function-1">XXX import</h2>
+
+<p>Imports xxx.</p>
+
+<h4>HTTP request</h4>
+  <p><code>POST http://[hostname]/Import.Service/ImportService.svc/rest/inquiry?token={token}</code></p>
+  <p>where {token} is the required GUID for authorization.</p>
+
+  <blockquote><p>Example request</p></blockquote>
+
+  <pre class="highlight shell tab-shell"><code><span class="s2">{
+	"Amount": "String content",
+	"CN08":{
+		"AddresseeAddress": "String content",
+		"AddresseeCity": "String content",
+		"AddresseeName": "String content",
+		"AddresseePostCd": "String content",
+		"AddresseeTelephone": "String content",
+		"AdviceOfReceipt": "String content",
+		"ArrivalDt": "String content",
+		"BulkAdvice": "String content",
+		"CODAmountNotCollected": "String content",
+		"CODAmountToGIroOffice": "String content",
+		"CODAmountToGiroAccount": "String content",
+		"CODAmountToSender": "String content",
+		"CODNotCollectReason": "String content",
+		"COdNotReceived": "String content",
+		"ContentDescription": "String content",
+		"ContentsMissing": "String content",
+		"Damaged": "String content",
+		"DeclarationReq": "String content",
+		"Delay": "String content",
+		"DestCODAmount": "String content",
+		"DestCODCurrency": "String content",
+		"DestCODDispDate": "String content",
+		"DestSign": "String content",
+		"DestSignDate": "String content",
+		"DestinationOE": "String content",
+		"DispSignature": "String content",
+		"DispatchBillNo": "String content",
+		"DispatchDepDate": "String content",
+		"DispatchId": "String content",
+		"DispatchList": "String content",
+		"DispatchMailCategory": "String content",
+		"DispatchOE": "String content",
+		"DispatchSerialNo": "String content",
+		"DispatchTransitDepDate": "String content",
+		"DispatchTransitMailCategory": "String content",
+		"DispatchTransitOE": "String content",
+		"ExpressItem": "String content",
+		"FinalDate": "String content",
+		"FinalReply": "String content",
+		"FinalReplyComment": "String content",
+		"FinalReplyRefNo": "String content",
+		"FinalSign": "String content",
+		"GiroAccount": "String content",
+		"GiroOffice": "String content",
+		"HandlingClassCd": "String content",
+		"IncompleteAdviceReceipt": "String content",
+		"InputDate": "String content",
+		"InsuredAmt": "String content",
+		"InsuredCurrency": "String content",
+		"ItemDeliveryDate": "String content",
+		"ItemDeliveryState": "String content",
+		"ItemDestInputDate": "String content",
+		"ItemFoundSentTo": "String content",
+		"ItemHeldAt": "String content",
+		"ItemHeldDate": "String content",
+		"ItemHeldReasonCd": "String content",
+		"ItemNotArrived": "String content",
+		"ItemRedirectAddress": "String content",
+		"ItemRedirectDate": "String content",
+		"ItemReturnCd": "String content",
+		"ItemReturnDate": "String content",
+		"ItemReturnedDate": "String content",
+		"ItemType": "String content",
+		"ItemWeight": "String content",
+		"LetterParcelBill": "String content",
+		"MailCategoryCd": "String content",
+		"OrigCODAmt": "String content",
+		"OrigCODCurrency": "String content",
+		"OrigCODInd": "String content",
+		"PriorityCd": "String content",
+		"ReceiptSeen": "String content",
+		"SenderAddress": "String content",
+		"SenderCity": "String content",
+		"SenderName": "String content",
+		"SenderPostCd": "String content",
+		"SenderTelephone": "String content",
+		"SignatureDate": "String content",
+		"SpecialList": "String content",
+		"TransitBulkAdvice": "String content",
+		"TransitDestinationOE": "String content",
+		"TransitDispSignature": "String content",
+		"TransitDispSignatureDate": "String content",
+		"TransitDispatchBillNo": "String content",
+		"TransitDispatchId": "String content",
+		"TransitDispatchList": "String content",
+		"TransitDispatchSerialNo": "String content",
+		"TransitLetterParcelBill": "String content",
+		"TransitSpecialList": "String content",
+		"UnexplainedReturn": "String content"
+	},
+	"CompensationTypeCd": "String content",
+	"DestOperatorCd": "String content",
+	"E3":{
+		"DestFlightNo": "String content",
+		"EMSAddresseeAddress": "String content",
+		"EMSAddresseeCity": "String content",
+		"EMSAddresseeName": "String content",
+		"EMSAddresseeNotified": "String content",
+		"EMSAddresseePostCode": "String content",
+		"EMSAddresseeTelephone": "String content",
+		"EMSArrivalDateAtDest": "String content",
+		"EMSArrivedAtDest": "String content",
+		"EMSAttemptDeliveryDate": "String content",
+		"EMSAttemptDeliveryOffice": "String content",
+		"EMSBagNo": "String content",
+		"EMSCurrency": "String content",
+		"EMSCustomDelayReason": "String content",
+		"EMSDestOE": "String content",
+		"EMSDestSign": "String content",
+		"EMSDispDepartDate": "String content",
+		"EMSDispId": "String content",
+		"EMSFinalDeliveryDate": "String content",
+		"EMSItemDelayed": "String content",
+		"EMSItemDeliveryState": "String content",
+		"EMSItemNotArrived": "String content",
+		"EMSItemOtherReason": "String content",
+		"EMSItemReturned": "String content",
+		"EMSItemValue": "String content",
+		"EMSItemWeight": "String content",
+		"EMSRecipientSign": "String content",
+		"EMSReturnDate": "String content",
+		"EMSReturnDispatched": "String content",
+		"EMSSenderAddress": "String content",
+		"EMSSenderCity": "String content",
+		"EMSSenderName": "String content",
+		"EMSSenderPostCode": "String content",
+		"EMSSenderTelephone": "String content",
+		"EMSSignature": "String content",
+		"FirstTransFlightNo": "String content",
+		"IsDocument": "String content",
+		"IsGift": "String content",
+		"IsMerchandise": "String content",
+		"Observations": "String content",
+		"OrigFlightNo": "String content",
+		"OverLabelledFid": "String content",
+		"SecondTransFlightNo": "String content"
+	},
+	"InquiryDate": "String content",
+	"InquiryDirection": "String content",
+	"InquiryEvents":[{
+		"InquiryEvtCd": "String content",
+		"InquiryEvtDt": "String content",
+		"OfficeCd": "String content",
+		"Offset":1.26743233E+15,
+		"ParsedDate":"\/Date(928142400000+0200)\/",
+		"UserFid": "String content",
+		"WorkstationFid": "String content"
+	}],
+	"InquiryNo": "String content",
+	"InternalComments": "String content",
+	"IsAmountInOwnCurrency": "String content",
+	"ItemId": "String content",
+	"MailClassCd": "String content",
+	"OrigOperatorCd": "String content",
+	"OwnCurrency": "String content",
+	"OwnPostEntity": "String content",
+	"PartnerOperatorCd": "String content",
+	"PostingDate": "String content",
+	"PostingOfficeCd": "String content",
+	"Reference": "String content"
+}
+</span>
+</code>
+</pre>
+<h2 id="function-2">XXX list</h2>
+
+<p>Retrieves a XXX list.</p>
+
+<h4>HTTP request</h4>
+  <p><code>GET http://[host name]/APIService/ListService.svc/rest/dnl?agentId={agentid}&token={token}</code></p>
+  <p>where {agentId} is the agent code and {token} is the required GUID for authorization. If <b>agentid</b> is null, the response contains a delivery list for each agent who has mail items to deliver.</p>
+
+<blockquote>
+  <p>Example response (200)</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="s2">{
+    "DeliveryAgentCode":"String content",
+    "Mailitems":[
+      {
+        "Identifier":"String content",
+        "LocalIdentifier":"String content",
+        "MailItemDeliveryInformation":{
+          "COD":{
+            "Amount":12678967.543233,
+            "Currency":"String content"
+          },
+          "DeliveryAddress":{
+            "Address":"String content",
+            "City":"String content",
+            "Forename":"String content",
+            "Name":"String content",
+            "PhoneNo":"String content",
+            "Postcode":"String content"
+          }
+        }
+      }
+    ]
+  }
+</span>
+</code>
+  </pre>
+
+<h4>Success</h4>
+<p>If successful, this method returns an HTTP 200 response with items grouped by agent. If agent is null, the structure is repeated for each agent listed.</p>
+<h2 id="function-3">XXX export</h2>
+<p>Exports new and existing XXX.</p>
+<h4>HTTP request</h4>
+  <p><code>POST http://[host name]/APIService/ExportService.svc/rest/Item?token={token}</code></p>
+  <p>where {token} is the required GUID for authorization.</p>
+
+  <blockquote>
+    <p>Example request</p>
+  </blockquote>
+  <pre class="highlight shell tab-shell"><code><span class="s2">{
+      "AdditionalFeesCurrencyCd":"String content",
+      "AdditionalFeesValue":12678967.543233,
+      "Addressee":{
+        "Address":"String content",
+        "AddressLine_2":"String content",
+        "AltDelivAddressCityTown":"String content",
+        "AltDelivAddressHouseId":"String content",
+        "AltDelivAddressLine_1":"String content",
+        "AltDelivAddressLine_2":"String content",
+        "AltDelivAddressPostcode":"String content",
+        "City":"String content",
+        "CodBIC":"String content",
+        "CodIBAN":"String content",
+        "ConsumerRegNumber":"String content",
+        "Country":"String content",
+        "CountrySubEntity":"String content",
+        "CustomerChargArrangement":"String content",
+        "CustomerLanguage":"String content",
+        "DeliveryServiceType":"String content",
+        "Email":"String content",
+        "FaxNo":"String content",
+        "Forename":"String content",
+        "HouseNumber":"String content",
+        "HouseNumberExtension":"String content",
+        "IntendedDeliveryLocationType":"String content",
+        "MailSourceExport":"String content",
+        "Name":"String content",
+        "NotificationMethods":"String content",
+        "NotificationTypes":"[
+          {
+            "NotificationTypeCd":"String content"
+          }
+        ]
+        "POBox":"String content",
+        "PhoneNo":"String content",
+        "PickUpPointId":"String content",
+        "Postcode":"String content",
+        "PosteRestanteInd":"String content",
+        "StreetName":"String content",
+        "Title":"String content",
+      },
+      "ClassCd":"String content",
+      "Content":"String content",
+      "CurrencyCd":"String content",
+      "CustomNo":"String content",
+      "CustomsTaxInformation":{
+        "AccompanyingDocuments":[
+          {
+            "DocumentTypeCode":"String content",
+            "Identifier":"String content",
+            "Name":"String content"
+          }
+        ],
+        "ContentPieces":[
+          {
+            "DeclaredValue":12678967.543233,
+            "DeclaredValueCurrencyCode":"String content",
+            "Description":"String content",
+            "Identifier":2147483647,
+            "NetWeight":12678967.543233,
+            "NumberOfUnits":2147483647,
+            "OriginLocation":"String content",
+            "TariffHeading":"String content",
+          }
+        ],
+        "DeclaredGrossWeight":12678967.543233,
+        "ItemNatureCode":"String content",
+        "ItemNatureCodeDescription":{
+          "Code": 2147483647,
+          "Description":"String content",
+        }
+        "Observations":"String content",
+        "RecipientCustomsReferenceNumber":"String content",
+        SenderCustomsReferenceNumber":"String content",
+      },
+      "DestCountryCd":"String content",
+      "DutiableInd":"String content",
+      "DutiableValue":12678967.543233,
+      "IdentifierType":"String content",
+      "InnrbagId":"String content",
+      "ItemEvents":[
+        {
+          "AttemptedDeliveryLocation":"String content",
+          "ConditionCd":2147483647,
+          "CustomsOfficeCd":"String content",
+          "CustomsOfficeTypeCd":"String content",
+          "CustomsReleaseStatusCd":"String content",
+          "Date":"String content",
+          "DelivLocation":"String content",
+          "DeliveryAgent":32767,
+          "DeliveryTypeCd":"String content",
+          "LodgementModeCd":"String content",
+          "MailSourceCd":"String content",
+          "NextOfficeFcd":"String content",
+          "NonDeliveryMeasure":"String content",
+          "NonDeliveryReason":32767,
+          "OfficeCd":"String content",
+          "RetentionReasonCd":32767,
+          "SignatoryBase64":"String content",
+          "SignatoryBase64Ext":"String content",
+          "SignatoryNm":"String content",
+          "TNCd":"String content",
+          "TransitDirectionCd":"String content",
+          "UserFid":"String content",
+          "WorkstationFid":"String content",
+        }
+      ],
+      "ItemId":"String content",
+      "ItemWeight":12678967.543233,
+      "Letter":{
+        "CoDCurrencyCd":"String content",
+        "CoDInd":"String content",
+        "CoDValue":12678967.543233,
+        "ConveyanceTypeCd":"String content",
+        "DeliveryProofInd":"String content",
+        "ExemptInd":"String content",
+        "ExpressInd":"String content",
+        "InsuredCurrencyCd":"String content",
+        "InsuredSDRValue":12678967.543233,
+        "InsuredValue":12678967.543233,
+        "MailCategoryCd":"String content",
+        "MailItemCategoryCd":"String content",
+        "ReturnDelay":2147483647,
+        "RouteInstructionCd":"String content",
+        "SenderInstructionCd":"String content",
+        "LetterCharacteristicCd":"String content",
+      }
+      "LocalId":"String content",
+      "Misc1":"String content",
+      "Misc2":"String content",
+      "Misc3":"String content",
+      "Misc4":"String content",
+      "MrsExpirationDate":"\/Date(928142400000+0200)\/",
+      "MrsOriginalId":"String content",
+      "MrsStatus":"String content",
+      "NetworkEntryLocationTypeCd":"String content",
+      "OperatorCd":"String content",
+      "OrigCountryCd":"String content",
+      "Parcel":{
+        "CoDCurrencyCd":"String content",
+        "CoDInd":"String content",
+        "CoDValue":12678967.543233,
+        "ConveyanceTypeCd":"String content",
+        "DeliveryProofInd":"String content",
+        "ExemptInd":"String content",
+        "ExpressInd":"String content",
+        "InsuredCurrencyCd":"String content",
+        "InsuredSDRValue":12678967.543233,
+        "InsuredValue":12678967.543233,
+        "MailCategoryCd":"String content",
+        "MailItemCategoryCd":"String content",
+        "ReturnDelay":2147483647,
+        "RouteInstructionCd":"String content",
+        "SenderInstructionCd":"String content",
+        "ParcelDue":12678967.543233,
+        "ParcelRate":12678967.543233,
+      },
+      "PostagePaidCurrencyCd":"String content",
+      "PostagePaidValue":12678967.543233,
+      "PostalStatusFcd":"String content",
+      "ProductTypeCd":"String content",
+      "RecptclId":"String content",
+      "Sender":{
+        "Address":"String content",
+        "AddressLine_2":"String content",
+        "AltDelivAddressCityTown":"String content",
+        "AltDelivAddressHouseId":"String content",
+        "AltDelivAddressLine_1":"String content",
+        "AltDelivAddressLine_2":"String content",
+        "AltDelivAddressPostcode":"String content",
+        "City":"String content",
+        "CodBIC":"String content",
+        "CodIBAN":"String content",
+        "ConsumerRegNumber":"String content",
+        "Country":"String content",
+        "CountrySubEntity":"String content",
+        "CustomerChargArrangement":"String content",
+        "CustomerLanguage":"String content",
+        "DeliveryServiceType":"String content",
+        "Email":"String content",
+        "FaxNo":"String content",
+        "Forename":"String content",
+        "HouseNumber":"String content",
+        "HouseNumberExtension":"String content",
+        "IntendedDeliveryLocationType":"String content",
+        "MailSourceExport":"String content",
+        "Name":"String content",
+        "NotificationMethods":"String content",
+        "NotificationTypes":[
+          {
+            "NotificationTypeCd":"String content"
+          }
+        ],
+        "POBox":"String content",
+        "PhoneNo":"String content",
+        "PickUpPointId":"String content",
+        "Postcode":"String content",
+        "PosteRestanteInd":"String content",
+        "StreetName":"String content",
+        "Title":"String content",
+      },
+      "Services":[
+        {
+          "ServiceCd":"String content"
+        }
+      ],
+      "Value":12678967.543233
+}
+</span>
+</code>
+</pre>
+
+<aside class="warning">The example request body shows the format to request two types of mail item (letter and parcel) for illustration purposes. In practice, you can only import one mail item at a time.</aside>
+
+<blockquote>
+  <p>Example response (200)</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="s2">
+  {
+    "AgentCode":"String content",
+    "Mailitems":[
+      {
+        "Identifier":"String content",
+        "LocalIdentifier":"String content",
+        "MailItemDeliveryInformation":{
+          "COD":{
+            "Amount":12678967.543233,
+            "Currency":"String content"
+          },
+          "DeliveryAddress":{
+            "Address":"String content",
+            "City":"String content",
+            "Forename":"String content",
+            "Name":"String content",
+            "PhoneNo":"String content",
+            "Postcode":"String content"
+          }
+        }
+      }
+    ]
+  }
+</span>
+</code>
+</pre>
+<h2 id="function-4">XXX trace</h2>
+
+<p>Retrieves trace information for XXX.</p>
+
+<h4>HTTP request</h4>
+
+  <p><code>GET http://[host name]/APIService/TraceService.svc/rest/Items?ids={comma-separated list of item identifiers}&lang={language code}&token={token}</code></p>
+  <p>where {ids} can be either international or local identifiers, {language code} is a 2 character language code for displaying localized text, and {token} is the required GUID for authorization. If language code is null, then the default language code 'en' (English) is used.</p>
+
+<blockquote>
+  <p>Example response (200)</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="s2">{
+    "Fid":"String content",
+    "InfoFromEdi":[
+      {
+        "Characteristics":{
+          "ExemptIndicator":true,
+          "ExpressIndicator":true,
+          "HandlingClass":{
+            "Code":"String content",
+            "Name":"String content",
+            "LocalName":"String content",
+          },
+          "InsuredMoney":{
+            "Amount":12678967.543233,
+            "Currency":"String content",
+          }
+        },
+        "DestCountry":{
+          "Code":"String content",
+          "Name":"String content",
+          "LocalName":"String content"
+        },
+        "InternationalId":"String content",
+        "OrigCountry":{
+          "Code":"String content",
+          "Name":"String content",
+          "LocalName":"String content"
+        },
+        "Weight":12678967.543233,
+        "Events":[
+          {
+            "CustomsReleaseStatus":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "DispatchNumber":"String content",
+            "EdiEvent":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "EventOffice":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "EventType":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "LocalDateTime":"String content",
+            "NonDeliveryMeasure":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "NonDeliveryReason":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "ReceivedDispatch":"String content",
+            "RetentionReason":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "Signatory":{
+              "SignatoryImage":"String content",
+              "SignatoryName":"String content"
+            },
+            "Charges":{
+              "COD":{
+                "Amount":{
+                  "Amount":12678967.543233,
+                  "Currency":"String content"
+                },
+                "BIC":"String content",
+                "IBAN":"String content"
+              },
+              "Customer_charging_arrangement":{
+                "Code":"String content",
+                "Name":"String content",
+                "LocalName":"String content"
+              }
+            },
+            "ItemArrivalStatus":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "MrsInfo":{
+              "ExpirationDatetime":"String content",
+              "ItemOriginalId":"String content",
+              "StatusCode":"String content"
+            }
+          }
+        ]
+      }
+    ],
+    "OperationalMailitems":[
+      {
+        "Characteristics":{
+          "ExemptIndicator":true,
+          "ExpressIndicator":true,
+          "HandlingClass":{
+            "Code":"String content",
+            "Name":"String content",
+            "LocalName":"String content"
+          },
+          "InsuredMoney":{
+            "Amount":12678967.543233,
+            "Currency":"String content"
+          }
+        },
+        "DestCountry":{
+          "Code":"String content",
+          "Name":"String content",
+          "LocalName":"String content"
+        },
+        "InternationalId":"String content",
+        "OrigCountry":{
+          "Code":"String content",
+          "Name":"String content",
+          "LocalName":"String content"
+        },
+        "Weight":12678967.543233,
+        "Charges":{
+          "COD":{
+            "Amount":{
+              "Amount":12678967.543233,
+              "Currency":"String content"
+            },
+            "BIC":"String content",
+            "IBAN":"String content"
+          },
+          "Customer_charging_arrangement":{
+            "Code":"String content",
+            "Name":"String content",
+            "LocalName":"String content"
+          }
+        },
+        "Events":[
+          {
+            "CustomsReleaseStatus":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "DispatchNumber":"String content",
+            "EdiEvent":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "EventOffice":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "EventType":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "LocalDateTime":"String content",
+            "NonDeliveryMeasure":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "NonDeliveryReason":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "ReceivedDispatch":"String content",
+            "RetentionReason":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            },
+            "Signatory":{
+              "SignatoryImage":"String content",
+              "SignatoryName":"String content"
+            },
+            "GmtDateTime":"String content",
+            "NextOffice":{
+              "Code":"String content",
+              "Name":"String content",
+              "LocalName":"String content"
+            }
+          }
+        ],
+        "LocalId":"String content",
+        "MrsInfo":{
+          "ExpirationDatetime":"String content",
+          "ItemOriginalId":"String content",
+          "StatusCode":"String content"
+        },
+        "ProductType":{
+          "Code":"String content",
+          "Name":"String content",
+          "LocalName":"String content"
+        }
+      }
+    ]
+  }
+]
+</span>
+</code>
+</pre>
+
+<h4>Success</h4>
+<p>If successful, this method returns an HTTP 200 response with the results grouped by mail item FID.</p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
