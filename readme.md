@@ -12,4 +12,4 @@ Recapt provides:
 For some recent documentation samples, click [here](/Portfolio/portfolio.html).
 
 ## Contact
-info@recapt.io
+pascalelsstephenson@gmail.com
